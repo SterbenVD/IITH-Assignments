@@ -1,0 +1,881 @@
+\let\negmedspace\undefined
+\let\negthickspace\undefined
+%\RequirePackage{amsmath}
+\documentclass[journal,12pt,twocolumn]{IEEEtran}
+ \usepackage[utf8]{inputenc}
+ \usepackage{graphicx}
+ \usepackage{amsmath}
+ \usepackage{mathrsfs}
+\usepackage{txfonts}
+\usepackage{stfloats}
+\usepackage{bm}
+\usepackage{cite}
+\usepackage{cases}
+\usepackage{subfig}
+ \usepackage{amsfonts}
+ \usepackage{amssymb}
+ \usepackage{enumitem}
+\usepackage{mathtools}
+\usepackage{tikz}
+\usepackage{circuitikz}
+\usepackage{verbatim}
+\usepackage[breaklinks=false,hidelinks]{hyperref}
+\usepackage{listings}
+\usepackage{calc}
+\usepackage{float}
+\usepackage{longtable}
+\usepackage{multirow}
+\usepackage{multicol}
+\usepackage{color}
+\usepackage{array}
+\usepackage{hhline}
+\usepackage{ifthen}
+\usepackage{chngcntr}
+\usepackage{url}
+\def\UrlBreaks{\do\/\do-}
+
+\lstset{frame=single,breaklines=true,columns=fullflexible,escapechar=!@}
+
+\newcommand{\BEQA}{\begin{eqnarray}}
+\newcommand{\EEQA}{\end{eqnarray}}
+\newcommand{\define}{\stackrel{\triangle}{=}}
+\bibliographystyle{IEEEtran}
+%\bibliographystyle{ieeetr}
+\def\inputGnumericTable{}
+\DeclareMathOperator*{\Res}{Res}
+\let\vec\mathbf
+\numberwithin{equation}{section}
+\renewcommand\thesection{\arabic{section}}
+\renewcommand\thesubsection{\thesection.\arabic{subsection}}
+\renewcommand\thesubsubsection{\thesubsection.\arabic{subsubsection}}
+
+\renewcommand\thesectiondis{\arabic{section}}
+\renewcommand\thesubsectiondis{\thesectiondis.\arabic{subsection}}
+\renewcommand\thesubsubsectiondis{\thesubsectiondis.\arabic{subsubsection}}
+
+\providecommand{\mbf}{\mathbf}
+\providecommand{\pr}[1]{\ensuremath{\Pr\left(#1\right)}}
+\providecommand{\qfunc}[1]{\ensuremath{Q\left(#1\right)}}
+\providecommand{\sbrak}[1]{\ensuremath{{}\left[#1\right]}}
+\providecommand{\lsbrak}[1]{\ensuremath{{}\left[#1\right.}}
+\providecommand{\rsbrak}[1]{\ensuremath{{}\left.#1\right]}}
+\providecommand{\brak}[1]{\ensuremath{\left(#1\right)}}
+\providecommand{\lbrak}[1]{\ensuremath{\left(#1\right.}}
+\providecommand{\rbrak}[1]{\ensuremath{\left.#1\right)}}
+\providecommand{\cbrak}[1]{\ensuremath{\left\{#1\right\}}}
+\providecommand{\lcbrak}[1]{\ensuremath{\left\{#1\right.}}
+\providecommand{\rcbrak}[1]{\ensuremath{\left.#1\right\}}}
+\providecommand{\mtx}[1]{\mathbf{#1}}
+\providecommand{\pfrac}[2]{\ensuremath{\frac{\partial #1}{\partial #2}}}
+\providecommand{\abs}[1]{\left\vert#1\right\vert}
+\providecommand{\res}[1]{\Res\displaylimits_{#1}}
+\newcommand{\myvec}[1]{\ensuremath{\begin{pmatrix}#1\end{pmatrix}}}
+\newcommand{\mydet}[1]{\ensuremath{\begin{vmatrix}#1\end{vmatrix}}}
+\providecommand{\gauss}[2]{\mathcal{N}\ensuremath{\left(#1,#2\right)}}
+\providecommand{\gitlink}[2]{{\color{blue}\href{https://github.com/SterbenVD/AI1110-Assignments/blob/main/Assignment\%20-\%20Random\%20Numbers/#1}{#2}}}
+\newcommand{\solution}{\noindent \textbf{\\ Solution: }}
+\title{Assignment: Random Numbers}
+\author{Vishal Vijay Devadiga (CS21BTECH11061)}
+\date{}
+\begin{document}
+% make the title area
+\maketitle
+
+\section{Uniform Random Numbers}
+Let $U$ be a uniform random variable between 0 and 1.
+\begin{enumerate}[label=\thesection.\arabic*,ref=\thesection.\theenumi]
+    \item Generate $10^6$ samples of $U$ using a C program and save into a file called uni.dat.
+          \solution Download the following file and execute the \gitlink{codes/1-1.c}{C program} or type in terminal:
+          \begin{lstlisting}
+wget https://github.com/SterbenVD/AI1110-Assignments/blob/main/Assignment\%20-\%20Random\%20Numbers/codes/1-1.c
+            \end{lstlisting}
+    \item
+          Load the uni.dat file into python and plot the empirical CDF of $U$ using the samples in uni.dat.
+          The CDF is defined as:
+          \begin{align}
+              F_{U}(x) = \pr{U \le x}
+          \end{align}
+          \begin{figure}[H]
+              \centering
+              \includegraphics[width = \columnwidth]{../figs/1_cdf.png}
+              \caption{The CDF of $U$}
+              \label{fig:1_cdf}
+          \end{figure}
+          \solution  The following \gitlink{codes/1-2.py}{python code} plots Fig. \ref{fig:1_cdf} or type in terminal:
+          \begin{lstlisting}
+wget https://github.com/SterbenVD/AI1110-Assignments/blob/main/Assignment\%20-\%20Random\%20Numbers/codes/1-2.py
+            \end{lstlisting}
+    \item Find a  theoretical expression for $F_{U}(x)$.
+          \solution
+          \begin{align}
+              \label{eq:U(x)}
+              U(x) =
+              \begin{cases}
+                  0, & x \in (-\infty,0) \\
+                  1, & x \in (0,1)       \\
+                  0, & x \in (1, \infty)
+              \end{cases}
+          \end{align}
+          By \eqref{eq:U(x)}:
+          \begin{align}
+                       & F_U(x) = \int_0^x U(x) dx \\
+              \implies & F_U(x) =
+              \begin{cases}
+                  0, & x \in (-\infty,0) \\
+                  x, & x \in (0,1)       \\
+                  1, & x \in (1, \infty)
+              \end{cases}
+          \end{align}
+          \\
+    \item
+          The mean of $U$ is defined as :
+          \begin{equation}
+              E\sbrak{U} = \dfrac{1}{N}\sum_{i=1}^{N}U_i
+          \end{equation}
+          and its variance as:
+          \begin{equation}
+              \text{var}\sbrak{U} = E\sbrak{U- E\sbrak{U}}^2
+          \end{equation}
+          Write a C program to  find the mean and variance of $U$.
+          \solution Download the following files and execute the \gitlink{codes/1-4.c}{C program} or type in terminal:
+          \begin{lstlisting}
+wget https://github.com/SterbenVD/AI1110-Assignments/blob/main/Assignment\%20-\%20Random\%20Numbers/codes/1-4.c
+            \end{lstlisting}
+          Values Obtained:
+          \begin{align}
+               & \fbox{Mean =  0.500007}
+               & \fbox{Variance = 0.083301}
+          \end{align}
+    \item Verify your result theoretically given that:
+          \begin{equation}
+              E\sbrak{U^k} = \int_{-\infty}^{\infty}x^kdF_{U}(x)
+          \end{equation}
+          \solution
+          \begin{align}
+                       & dF_U(x) = p_U(x) dx                           \\
+              \label{eq:U^k}
+              \implies & E[U^k] = \int_{-\infty}^{\infty}x^k p_U(x) dx
+          \end{align}
+          Also, by \eqref{eq:U(x)}
+          \begin{align}
+              p_U(x) =
+              \begin{cases}
+                  0, & x \in (-\infty,0) \\
+                  1, & x \in (0,1)       \\
+                  0, & x \in (1, \infty)
+              \end{cases}
+          \end{align}
+          Therefore, from Equations \ref{eq:U(x)} and \ref{eq:U^k}, we have:
+          \begin{align}
+              E[U] & =  \int_{-\infty}^{\infty}x p_U(x) dx \\
+                   & = \int_0 ^1 x dx                      \\
+                   & = \dfrac{1}{2}
+          \end{align}
+          \begin{align}
+              E[U^2] & =  \int_{-\infty}^{\infty}x^2 p_U(x) dx \\
+                     & = \int_0 ^1 x^2 dx                      \\
+                     & = \dfrac{1}{3}
+          \end{align}
+          \begin{align}
+              E[U^2] - E[U]^2 & = \dfrac{1}{3} - \brak{\dfrac{1}{2}}^2 \\
+                              & = \dfrac{1}{12}
+          \end{align}
+          Therefore, the theoretical mean is $\dfrac{1}{2}$, and the theoretical variance is $\dfrac{1}{12}$ which closely matches the experimental values.
+\end{enumerate}
+
+\section{Central Limit Theorem}
+\begin{enumerate}[label=\thesection.\arabic*,ref=\thesection.\theenumi]
+    \item Generate $10^6$ samples of the random variable:
+          \begin{equation}
+              X = \sum_{i=1}^{12}U_i -6
+          \end{equation}
+          using a C program, where $U_i, i = 1,2,\dots, 12$ are  a set of independent uniform random variables between 0 and 1
+          and save in a file called gau.dat.
+          \solution Download the following files and execute the \gitlink{codes/2-1.c}{C program} or type in terminal:
+          \begin{lstlisting}
+wget https://github.com/SterbenVD/AI1110-Assignments/blob/main/Assignment\%20-\%20Random\%20Numbers/codes/2-1.c
+            \end{lstlisting}
+    \item Load gau.dat in python and plot the empirical CDF of $X$ using the samples in gau.dat.
+          \begin{figure}[H]
+              \centering
+              \includegraphics[width = \columnwidth]{../figs/2_cdf}
+              \caption{The CDF of $X$}
+              \label{fig:2_cdf}
+          \end{figure}
+          \solution The following \gitlink{codes/2-2.py}{python code} plots Fig. \ref{fig:2_cdf}  or type in terminal:
+          \begin{lstlisting}
+wget https://github.com/SterbenVD/AI1110-Assignments/blob/main/Assignment\%20-\%20Random\%20Numbers/codes/2-2.py
+            \end{lstlisting}
+    \item Load gau.dat in python and plot the empirical PDF of $X$ using the samples in gau.dat.
+          The PDF of $X$ is defined as:
+          \begin{align}
+              p_{X}(x) = \dfrac{d}{dx}F_{X}(x)
+          \end{align}
+          \begin{figure}[H]
+              \centering
+              \includegraphics[width = \columnwidth]{../figs/2_pdf}
+              \caption{The PDF of $X$}
+              \label{fig:2_pdf}
+          \end{figure}
+          \solution The following \gitlink{codes/2-3.py}{python code} plots Fig. \ref{fig:2_pdf} or type in terminal:
+          \begin{lstlisting}
+wget https://github.com/SterbenVD/AI1110-Assignments/blob/main/Assignment\%20-\%20Random\%20Numbers/codes/2-3.py
+            \end{lstlisting}
+    \item Find the mean and variance of $X$ by writing a C program.
+          \solution Download the following files and execute the \gitlink{codes/2-4.c}{C program} or type in terminal:
+          \begin{lstlisting}
+wget https://github.com/SterbenVD/AI1110-Assignments/blob/main/Assignment\%20-\%20Random\%20Numbers/codes/2-4.c
+            \end{lstlisting}
+          Values Obtained:
+          \begin{align}
+               & \fbox{Mean =  -0.000241}
+               & \fbox{Variance = 1.000726}
+          \end{align}
+    \item Given that:
+          \begin{align}
+              p_{X}(x) = \dfrac{1}{\sqrt{2\pi}}\exp\brak{-\dfrac{x^2}{2}}, -\infty < x < \infty,
+          \end{align}
+          repeat the above exercise theoretically
+          \solution
+          \begin{align}
+              E[X] & =  \int_{-\infty}^{\infty} \dfrac{x}{\sqrt{2\pi}}\exp{\left(-\dfrac{x^2}{2}\right)} \\
+                   & = -\dfrac{1}{\sqrt{2\pi}}\exp\brak{-\dfrac{x^2}{2}} \Bigg{|}_{-\infty}^{\infty}     \\
+                   & = 0
+          \end{align}
+          Also,
+          \begin{align}
+              E[X^2] & =  \int_{-\infty}^{\infty} \dfrac{x^2}{\sqrt{2\pi}}\exp{\left(-\dfrac{x^2}{2}\right)}                                                        \\
+                     & = -\dfrac{x}{\sqrt{2\pi}}e^{-\dfrac{x^2}{2}} \Bigg{|}_{-\infty}^{\infty} + \int_{-\infty}^{\infty} \dfrac{1}{\sqrt{2\pi}}e^{-\dfrac{x^2}{2}} \\
+                     & = 0 + \dfrac{1}{\sqrt{2\pi}} \times \sqrt{2\pi}                                                                                              \\
+                     & = 1
+          \end{align}
+          Thus,
+          \begin{align}
+              \text{var}(X) & = E[X^2] - E[X]^2 \\
+                            & = 1
+          \end{align}
+          Therefore, the mean is $0$ and the variance is $1$.
+          \begin{align}
+              \pr{X > x} & = Q\brak{Z > x} \\
+                         & = Q\brak{z}     \\
+              CDF        & = \pr{X < x}    \\
+                         & = 1 - Q\brak{z}
+          \end{align}
+\end{enumerate}
+
+\section{From Uniform to Other}
+\begin{enumerate}[label=\thesection.\arabic*,ref=\thesection.\theenumi]
+    \item
+          Generate samples of:
+          \begin{equation}
+              V = -2\ln\brak{1-U}
+          \end{equation}
+          and plot its CDF.
+          \solution
+          \begin{figure}[H]
+              \centering
+              \includegraphics[width = \columnwidth]{../figs/3_cdf}
+              \caption{The CDF of $V$}
+              \label{fig:3_cdf}
+          \end{figure}
+          The following \gitlink{codes/3-1.py}{python code} plots Fig. \ref{fig:3_cdf} or type in terminal:
+          \begin{lstlisting}
+wget https://github.com/SterbenVD/AI1110-Assignments/blob/main/Assignment\%20-\%20Random\%20Numbers/codes/3-1.py
+            \end{lstlisting}
+    \item Find a theoretical expression for $F_V(x)$.
+          \solution
+          \begin{align}
+              F_V(x) & = \pr{V \leq x}                                        \\
+                     & = \pr{-2\ln(1-U) \leq x}                               \\
+                     & = \pr{1-U \geq	\exp{\left(-\dfrac{x}{2}\right)}}        \\
+                     & = \pr{U \leq 1 - \exp{\left(-\dfrac{x}{2}\right)}}     \\
+                     & = F_U\left(1 - \exp{\left(-\dfrac{x}{2}\right)}\right)
+          \end{align}
+          Therefore,
+          \begin{align}
+                       & F_V(x) =
+              \begin{cases}
+                  0,                                    & 1 - \exp{\left(-\dfrac{x}{2}\right)} \in (-\infty,0) \\
+                  1 - \exp{\left(-\dfrac{x}{2}\right)}, & 1 - \exp{\left(-\dfrac{x}{2}\right)} \in (0,1)       \\
+                  1,                                    & 1 - \exp{\left(-\dfrac{x}{2}\right)} \in (1, \infty)
+              \end{cases} \\
+              \implies & F_V(x) =
+              \begin{cases}
+                  0,                                    & x \in (-\infty,0) \\
+                  1 - \exp{\left(-\dfrac{x}{2}\right)}, & x \in (0,\infty)
+              \end{cases}
+          \end{align}
+\end{enumerate}
+
+\section{Triangular Distribution}
+\begin{enumerate}[label=\thesection.\arabic*
+        ,ref=\thesection.\theenumi]
+    %
+    \item Generate
+          \begin{align}
+              T = U_1+U_2
+          \end{align}
+          \solution Download the following files and execute the \gitlink{codes/4-1.c}{C program} or type in terminal:
+          \begin{lstlisting}
+wget https://github.com/SterbenVD/AI1110-Assignments/blob/main/Assignment\%20-\%20Random\%20Numbers/codes/4-1.c
+            \end{lstlisting}
+    \item Find the CDF of $T$.
+          \solution
+          \begin{figure}[H]
+              \centering
+              \includegraphics[width = \columnwidth]{../figs/4_cdf}
+              \caption{The CDF of $T$}
+              \label{fig:4_cdf}
+          \end{figure}
+          The following \gitlink{codes/4-2.py}{python code} plots Fig. \ref{fig:4_cdf} or type in terminal:
+          \begin{lstlisting}
+wget https://github.com/SterbenVD/AI1110-Assignments/blob/main/Assignment\%20-\%20Random\%20Numbers/codes/4-2.py
+            \end{lstlisting}
+    \item Find the PDF of $T$.
+          \solution\begin{figure}[H]
+              \centering
+              \includegraphics[width = \columnwidth]{../figs/4_pdf}
+              \caption{The PDF of $T$}
+              \label{fig:4_pdf}
+          \end{figure}
+          \solution The following \gitlink{codes/4-3.py}{python code} plots Fig. \ref{fig:4_pdf} or type in terminal:
+          \begin{lstlisting}
+wget https://github.com/SterbenVD/AI1110-Assignments/blob/main/Assignment\%20-\%20Random\%20Numbers/codes/4-3.py
+      \end{lstlisting}
+    \item Find the theoretical expressions for the PDF and CDF of $T$.
+          \solution
+          \begin{align}
+              T = U_1 + U_2
+          \end{align}
+          Thus we have:
+          \begin{align}
+              p_T(t) & = (p_{U_1} * p_{U_2})(t)                       \\
+                     & = \int _{-\infty} ^{\infty} p_U(u) p_U(t-u) du \\
+                     & = \int _0 ^1 p_U(t-u) du
+          \end{align}
+          When $0 < t < 1$:
+          \begin{align}
+              p_T(t) & = \int _0 ^1 p_U(t-u) du \\
+                     & = \int _0 ^t p_U(t-u) du \\
+                     & = \int _0 ^t du          \\
+                     & = t
+          \end{align}
+          when $ 1 < t < 2$:
+          \begin{align}
+              p_T(t) & = \int _0 ^1 p_U(t-u) du     \\
+                     & = \int _{t-1} ^1 p_U(t-u) du \\
+                     & = \int _{t-1} ^1 du          \\
+                     & = 2-t
+          \end{align}
+          When $t < 0$ and $t > 2$ , the integral evaluates to $0$. Thus,
+          \begin{align}
+              p_T(t) =
+              \begin{cases}
+                  0,   & t \in (-\infty,0) \\
+                  t,   & t \in (0,1)       \\
+                  2-t, & t \in (1, 2)      \\
+                  0,   & t \in (2,\infty)
+              \end{cases}
+          \end{align}
+          For CDF of T:
+          \begin{align}
+                       & F_T(t) = \int _{-\infty} ^t p_T(x) dx \\
+              \implies & F_T(t) =
+              \begin{cases}
+                  0,                       & t \in (-\infty,0) \\
+                  \frac{t^2}{2},           & t \in (0,1)       \\
+                  -\frac{t^2}{2} + 2t - 1, & t \in (1, 2)      \\
+                  1,                       & t \in (2,\infty)
+              \end{cases}
+          \end{align}
+    \item Verify your results through a plot.
+          \solution Fig.\ref{fig:4_cdf} and Fig.\ref{fig:4_pdf} plots the theoretical cdf and pdf respectively, which closely matches the experimental values.
+\end{enumerate}
+\section{Maximul Likelihood}
+\begin{enumerate}[label=\thesection.\arabic*
+        ,ref=\thesection.\theenumi]
+    \item Generate equiprobable $X \in \cbrak{1,-1}$.
+          \solution Download the following files and execute the \gitlink{codes/5-1.c}{C program} or type in terminal:
+          \begin{lstlisting}
+wget https://github.com/SterbenVD/AI1110-Assignments/blob/main/Assignment\%20-\%20Random\%20Numbers/codes/5-1.c
+                    \end{lstlisting}
+    \item Generate
+          \begin{equation}
+              Y = AX+N,
+          \end{equation}
+          where $A = 5 \text{ dB}, X \in \cbrak{1,-1}$,  is Bernoulli and $N \sim \gauss{0}{1}$.
+          \solution Download the following files and execute the \gitlink{codes/5-2.c}{C program} or type in terminal:
+          \begin{lstlisting}
+wget https://github.com/SterbenVD/AI1110-Assignments/blob/main/Assignment\%20-\%20Random\%20Numbers/codes/5-2.c
+                    \end{lstlisting}
+    \item Plot $Y$.
+          \solution
+          \begin{figure}[H]
+              \centering
+              \includegraphics[width = \columnwidth]{../figs/5_Y}
+              \caption{Plot of $Y$}
+              \label{fig:5_Y}
+          \end{figure}
+          The following \gitlink{codes/5-3.py}{python code} plots Fig. \ref{fig:5_Y} or type in terminal:
+          \begin{lstlisting}
+wget https://github.com/SterbenVD/AI1110-Assignments/blob/main/Assignment\%20-\%20Random\%20Numbers/codes/5-3.py
+            \end{lstlisting}
+    \item Guess how to estimate $X$ from $Y$.
+          \solution Since X is Bernoulli with values $\cbrak{-1,1}$,
+          the function $sgn\brak{y}$ can be defined to estimate X from Y.
+          \begin{align}
+              sgn(y) =
+              \begin{cases}
+                  -1, & y \in (-\infty,0) \\
+                  1,  & y \in [0, \infty)
+              \end{cases}
+          \end{align}
+          Using $sgn\brak{y}$, we can estimate the corresponding values of X.
+          \label{ml-ch4_sim}
+    \item Find
+          \begin{equation}
+              P_{e|0} = \pr{\hat{X} = -1|X=1}
+          \end{equation}
+          and
+          \begin{equation}
+              P_{e|1} = \pr{\hat{X} = 1|X=-1}
+          \end{equation}
+          \solution Download the following files and execute the \gitlink{codes/5-4.c}{C program} or type in terminal:
+          \begin{lstlisting}
+wget https://github.com/SterbenVD/AI1110-Assignments/blob/main/Assignment\%20-\%20Random\%20Numbers/codes/5-4.c
+              \end{lstlisting}
+          Values Obtained:
+          \begin{align}
+               & \fbox{$P_{e|0} = 0.310412$}
+               & \fbox{$P_{e|1} = 0.310724$}
+          \end{align}
+    \item Find $P_e$, assuming that $X$ has equiprobable symbols.
+          \solution
+          \begin{align}
+              P_e & = P_{e|0} \times \pr{X = 1} + P_{e|1} \times \pr{X = -1} \\
+                  & = \dfrac{P_{e|0} + P_{e|1}}{2}
+          \end{align}
+          Also,
+          \begin{align}
+              P_{e|0} & = \pr{\hat{X} = -1|X=1} \\
+                      & = \pr{AX + N < 0|X=1}   \\
+                      & = \pr{A + N < 0}        \\
+                      & = \pr{N < -A}
+          \end{align}
+          Since, $N \sim \gauss{0}{1}$
+          \begin{align}
+              \implies P_{e|0} & = \int_{-\infty} ^{-A} \dfrac{1}{\sqrt{2\pi}} e^{\frac{-x^2}{2}} dx \\
+                               & = \int_{A} ^{\infty} \dfrac{1}{\sqrt{2\pi}} e^{\frac{-x^2}{2}} dx   \\
+                               & = Q_N(A)
+          \end{align}
+          Similarly, $P_{e|1} = Q_N(A)$
+          \begin{align}
+              \implies P_e = Q_N(A)
+          \end{align}
+    \item
+          Verify by plotting  the theoretical $P_e$ with respect to $A$ from 0 to 10 dB.
+          \solution
+          \begin{figure}[H]
+              \centering
+              \includegraphics[width = \columnwidth]{../figs/5-7}
+              \caption{Plot of $P_e$}
+              \label{fig:5-7}
+          \end{figure}
+          The following \gitlink{codes/5-7.py}{python code} plots Fig. \ref{fig:5-7} or type in terminal:
+          \begin{lstlisting}
+wget https://github.com/SterbenVD/AI1110-Assignments/blob/main/Assignment\%20-\%20Random\%20Numbers/codes/5-7.py
+              \end{lstlisting}
+
+          \begin{figure}[H]
+              \centering
+              \includegraphics[width = \columnwidth]{../figs/5-7_semilog.png}
+              \caption{Plot of $P_e$ with semilog axis}
+              \label{fig:5-7_semilog}
+          \end{figure}
+          The following \gitlink{codes/5-7_semilog.py}{python code} plots Fig. \ref{fig:5-7_semilog} or type in terminal:
+          \begin{lstlisting}
+wget https://github.com/SterbenVD/AI1110-Assignments/blob/main/Assignment\%20-\%20Random\%20Numbers/codes/5-7_semilog.py
+            \end{lstlisting}
+    \item Now, consider a threshold $\delta$  while estimating $X$ from $Y$. Find the value of $\delta$ that maximizes the theoretical $P_e$.
+          \solution
+          To estimate $X$ from $Y$:
+          \begin{align}
+              X =
+              \begin{cases}
+                  1,  & Y > \delta \\
+                  -1, & Y < \delta
+              \end{cases}
+          \end{align}
+          Thus,
+          \begin{align}
+              P_{e|0} & = \pr{\hat{X} = -1 | X = 1}                                                 \\
+                      & = \pr{AX+N < \delta | X = 1}                                                \\
+                      & = \pr{N + A< \delta }                                                       \\
+                      & = \pr{N < \delta - A}                                                       \\
+                      & = \int _{-\infty} ^{\delta - A} \dfrac{e^{-\frac{x^2}{2}}}{\sqrt{2\pi}}  dx \\
+                      & = \int _{A - \delta} ^{\infty} \dfrac{e^{-\frac{x^2}{2}}}{\sqrt{2\pi}} dx   \\
+                      & = Q_N(A - \delta)                                                           \\
+          \end{align}
+          Similarly,
+          \begin{align}
+              P_{e|1} & = Q_N(A+\delta)
+          \end{align}
+          Thus,
+          \begin{align}
+              \label{eq:Pe}
+              P_e & = P_{e|0} \pr{X = 1} + P_{e|1} \pr{X = -1}    \\
+                  & = \frac{Q_N(A - \delta) + Q_N(A + \delta)}{2}
+          \end{align}
+          To maximize $P_e$, differentiate the above equation w.r.t $\delta$ and equate it to $0$:
+          \begin{align}
+              0 & = \frac{d}{d\delta} \left(\dfrac{Q_N(A - \delta) + Q_N(A + \delta)}{2}\right)                                                        \\
+                & = \frac{1}{2} \left(\frac{1}{\sqrt{2\pi}} e^{-\frac{(\delta - A)^2}{2}} - \frac{1}{\sqrt{2\pi}} e^{-\frac{(A + \delta)^2}{2}}\right) \\
+          \end{align}
+          Thus,
+          \begin{align}
+                       & (\delta - A)^2   = (\delta + A)^2 \\
+              \implies & \delta  = 0
+          \end{align}
+    \item Repeat the above exercise when
+          \begin{align}
+              p_{X}(0) = p
+          \end{align}
+          \solution
+          Using Eq. \eqref{eq:Pe}, we have:
+          \begin{align}
+              P_e & = P_{e|0} p+ P_{e|1} (1-p)                 \\
+                  & = p Q_N(A - \delta) + (1-p)Q_N(A + \delta)
+          \end{align}
+          To maximize $P_e$, differentiate the above equation w.r.t $\delta$ and equate it to $0$:
+          \begin{align}
+                       & 0  =  \dfrac{p}{\sqrt{2\pi}} e^{-\frac{(\delta - A)^2}{2}} - \dfrac{(1-p)}{\sqrt{2\pi}} e^{-\frac{(A + \delta)^2}{2}} \\
+              \implies & pe^{-\frac{(\delta - A)^2}{2}} = (1-p)e^{-\frac{(A + \delta)^2}{2}}
+          \end{align}
+          Taking $\ln$ on both sides:
+          \begin{align}
+              \ln{p} - \frac{(\delta - A)^2}{2} & = \ln{(1-p)} - \frac{(\delta + A)^2}{2} \\
+              \implies  2A\delta                & = \ln{\frac{1-p}{p}}                    \\
+              \implies  \delta                  & = \frac{1}{2A} \ln{\frac{1-p}{p}}
+          \end{align}
+    \item Repeat the above exercise using the MAP criterion.
+          \solution
+          \begin{align}
+               & \pr{X = -1} = p    \\
+               & \pr{X = 1} = (1-p)
+          \end{align}
+          \begin{align}
+              \nonumber  \implies  p_Y(y) & = p_{Y|X = -1}(y|-1) \pr{X = -1} \\
+                                          & + p_{Y| X = 1}(y|1) \pr{X = 1}   \\
+              \nonumber                   & = p \times p_{(-A + N)}(y)       \\
+                                          & + (1-p) \times p_{(A+N)} (y)
+          \end{align}
+          Also:
+          \begin{align}
+              p_{X|Y}(x|y) & = \frac{p_{Y|X}(y|x) \times p_X(x)}{p_Y(y)}
+          \end{align}
+          When $X=1$:
+          \begin{align}
+              p_{X|Y}(1|y) & = \frac{p_{Y|X}(y|1) \times p_X(1)}{p_Y(y)}                                                                                                                                       \\
+                           & = \frac{\left(1-p\right) \frac{e^{-\frac{(y-A)^2}{2}}}{\sqrt{2\pi}}}{ p \frac{e^{-\frac{(y+A)^2}{2}}}{\sqrt{2\pi}} + \left(1-p\right) \frac{e^{-\frac{(y-A)^2}{2}}}{\sqrt{2\pi}}} \\
+                           & = \frac{1-p}{pe^{-2yA} + (1-p)}
+          \end{align}
+          Similarly, when $X = -1$:
+          \begin{align}
+              p_{X|Y}(-1|y) & = \frac{p}{p + \left(1-p\right) e^{2yA}}
+          \end{align}
+          Thus,
+          \begin{align}
+              \frac{p}{p + \brak{1 - p}e^{-2yA}} & \gtrless \frac{1 - p}{\brak{1 - p} + pe^{2yA}}   \\
+              \implies p^2e^{2yA}                & \gtrless \brak{1 - p}^2e^{-2yA}                  \\
+              \implies y                         & \gtrless \frac{1}{2A}\ln{\brak{\frac{1 - p}{p}}}
+              \label{eq:MAP}
+          \end{align}
+          By \eqref{eq:MAP}, if $y > 0$, then we can estimate $X=1$. If $y<0$, then we can estimate $X=-1$.
+\end{enumerate}
+\section{Gaussian to Other}
+\begin{enumerate}[label=\thesection.\arabic*
+        ,ref=\thesection.\theenumi]
+    \item
+          Let $X_1 \sim  \gauss{0}{1}$ and $X_2 \sim  \gauss{0}{1}$. Plot the CDF and PDF of
+          \begin{equation}
+              V = X_1^2 + X_2^2
+          \end{equation}
+          \solution Download the following files and execute the \gitlink{codes/6-1.c}{C program} or type in terminal:
+          \begin{lstlisting}
+wget https://github.com/SterbenVD/AI1110-Assignments/blob/main/Assignment\%20-\%20Random\%20Numbers/codes/6-1.c
+                    \end{lstlisting}
+          \begin{figure}[H]
+              \centering
+              \includegraphics[width = \columnwidth]{../figs/6-1_cdf}
+              \caption{The CDF of $V$}
+              \label{fig:6-1_cdf}
+          \end{figure}
+          The following \gitlink{codes/6-1_cdf.py}{python code} plots Fig. \ref{fig:6-1_cdf} or type in terminal:
+          \begin{lstlisting}
+wget https://github.com/SterbenVD/AI1110-Assignments/blob/main/Assignment\%20-\%20Random\%20Numbers/codes/6-1_cdf.py
+                        \end{lstlisting}
+          \begin{figure}[H]
+              \centering
+              \includegraphics[width = \columnwidth]{../figs/6-1_pdf}
+              \caption{The PDF of $V$}
+              \label{fig:6-1_pdf}
+          \end{figure}
+          The following \gitlink{codes/6-1_pdf.py}{python code} plots Fig. \ref{fig:6-1_pdf} or type in terminal:
+          \begin{lstlisting}
+wget https://github.com/SterbenVD/AI1110-Assignments/blob/main/Assignment\%20-\%20Random\%20Numbers/codes/6-1_pdf.py
+                          \end{lstlisting}
+    \item
+          If:
+          \begin{equation}
+              F_{V}(x) =
+              \begin{cases}
+                  1 - e^{-\alpha x} & x \geq 0 \\
+                  0                 & x < 0,
+              \end{cases}
+          \end{equation}
+          find $\alpha$.
+          \solution $X_1$ and $X_2$ are i.i.d that can be transformed as:
+          \begin{align}
+              X_1 = R \cos{\Theta} \\
+              X_2 = R \sin{\Theta}
+          \end{align}
+          where $R \in [0, \infty), \Theta \in [0, 2\pi)$. Thus,
+          \begin{align}
+              \mtx{J}            & = \myvec{\pfrac{X_1}{R} & \pfrac{X_2}{R} \\ \pfrac{X_1}{\Theta}   & \pfrac{X_2}{\Theta}}  \\
+                                 & = \myvec{\cos{\Theta}   & \sin{\Theta}   \\ -R\sin{\Theta}     & R\cos{\Theta}}              \\
+              \implies |\mtx{J}| & = R
+          \end{align}
+          Also,
+          \begin{align}
+              p_{R, \Theta}(r, \theta) & = |\mtx{J}|p_{X_1, X_2}(x_1, x_2)                     \\
+                                       & = Rp_{X_1}(x_1)p_{X_2}(x_2)                           \\
+                                       & = \frac{R}{2\pi}\exp{\brak{-\frac{X_1^2 + X_2^2}{2}}} \\
+                                       & = \frac{R}{2\pi}\exp{\brak{-\frac{R^2}{2}}}
+              \label{eq:joint}
+          \end{align}
+          Thus,
+          \begin{align}
+              p_R(r) & = \int_{0}^{2\pi}p_{R, \Theta}(r, \theta) d\theta \\
+                     & = R\exp{\brak{-\frac{R^2}{2}}}
+          \end{align}
+          However, $V = X_1^2 + X_2^2 = R^2 \geq 0$, thus $F_V(x) = 0$ for $x \leq 0$.
+          \begin{align}
+              F_V(x) & = F_R(\sqrt{x})                                         \\
+                     & = \int_{0}^{\sqrt{x}}r\exp{\brak{-\frac{r^2}{2}}}dr     \\
+                     & = \int_{0}^{\frac{x}{2}}e^{-t}dt = 1 - e^{-\frac{x}{2}}
+          \end{align}
+          For $x \geq 0$,
+          \begin{align}
+              p_V(x) = \frac{1}{2}e^{-\frac{x}{2}}
+          \end{align}
+          Hence,
+          \begin{align}
+              F_V(x) =
+              \begin{cases}
+                  1 - e^{-\frac{x}{2}} & x \geq 0 \\
+                  0                    & x < 0
+              \end{cases} \label{eq:chi-cdf} \\
+              p_V(x) =
+              \begin{cases}
+                  \frac{1}{2}e^{-\frac{x}{2}} & x \geq 0 \\
+                  0                           & x < 0
+              \end{cases} \label{eq:chi-pdf}
+          \end{align}
+    \item
+          \label{ch3_raleigh_sim}
+          Plot the CDF and PDf of
+          %
+          \begin{equation}
+              A = \sqrt{V}
+          \end{equation}
+          \solution
+          \begin{align}
+              F_A(x) & = \pr{A \leq x}        \\
+                     & = \pr{\sqrt{V} \leq x} \\
+          \end{align}
+          For $x \geq 0$:
+          \begin{align}
+              F_A(x) & = \pr{V \leq x^2}                   \\
+                     & = F_V(x^2) = 1 - e^{-\frac{x^2}{2}}
+          \end{align}
+          and so,
+          \begin{align}
+              p_A(x) = xe^{-\frac{x^2}{2}}
+          \end{align}
+          Thus, the CDF and PDF of $A$ is given by
+          \begin{align}
+              F_V(x) =
+              \begin{cases}
+                  1 - e^{-\frac{x^2}{2}} & x \geq 0 \\
+                  0                      & x < 0
+              \end{cases} \label{eq:ral-cdf} \\
+              p_V(x) =
+              \begin{cases}
+                  xe^{-\frac{x}{2}} & x \geq 0 \\
+                  0                 & x < 0
+              \end{cases} \label{eq:ral-pdf}
+          \end{align}
+          \begin{figure}[H]
+              \centering
+              \includegraphics[width = \columnwidth]{../figs/6-3_cdf}
+              \caption{The CDF of $A$}
+              \label{fig:6-3_cdf}
+          \end{figure}
+          The following \gitlink{codes/6-3_cdf.py}{python code} plots Fig. \ref{fig:6-3_cdf} or type in terminal:
+          \begin{lstlisting}
+wget https://github.com/SterbenVD/AI1110-Assignments/blob/main/Assignment\%20-\%20Random\%20Numbers/codes/6-3_cdf.py
+            \end{lstlisting}
+          \begin{figure}[H]
+              \centering
+              \includegraphics[width = \columnwidth]{../figs/6-3_pdf.png}
+              \caption{The PDF of $A$}
+              \label{fig:6-3_pdf}
+          \end{figure}
+          The following \gitlink{codes/6-3_pdf.py}{python code} plots Fig. \ref{fig:6-3_pdf} or type in terminal:
+          \begin{lstlisting}
+wget https://github.com/SterbenVD/AI1110-Assignments/blob/main/Assignment\%20-\%20Random\%20Numbers/codes/6-3_pdf.py
+              \end{lstlisting}
+\end{enumerate}
+\section{Conditional Probability}
+\begin{enumerate}[label=\thesection.\arabic*
+        ,ref=\thesection.\theenumi]
+    \item Plot
+          \begin{align}
+              P_e = \pr{\hat{X} = -1|X = 1}
+          \end{align}
+          for
+          \begin{align}
+              Y = AX + N
+          \end{align}
+          where $A$ is Rayleigh with $E\sbrak{A^2} = \gamma,\ N \sim \gauss{0}{1},\ X \in \cbrak{1, -1}$ for $0 \leq \gamma \leq 10 \text{ dB}$.
+          \solution Download the following files and execute the \gitlink{codes/7-1.c}{C program} or type in terminal:
+          \begin{lstlisting}
+wget https://github.com/SterbenVD/AI1110-Assignments/blob/main/Assignment\%20-\%20Random\%20Numbers/codes/7-1.c
+                    \end{lstlisting}
+          \begin{figure}[H]
+              \centering
+              \includegraphics[width = \columnwidth]{../figs/7-1.png}
+              \caption{Plot of $P_e$ wrt $\gamma$}
+              \label{fig:7-1}
+          \end{figure}
+          The following \gitlink{codes/7-1.py}{python code} plots Fig. \ref{fig:7-1} or type in terminal:
+          \begin{lstlisting}
+wget https://github.com/SterbenVD/AI1110-Assignments/blob/main/Assignment\%20-\%20Random\%20Numbers/codes/7-1.py
+                          \end{lstlisting}
+          \begin{figure}[H]
+              \centering
+              \includegraphics[width = \columnwidth]{../figs/7-1_semilog.png}
+              \caption{Semilog Plot of $P_e$ wrt $\gamma$}
+              \label{fig:7-1_semilog}
+          \end{figure}
+          The following \gitlink{codes/7-1_semilog.py}{python code} plots Fig. \ref{fig:7-1_semilog} or type in terminal:
+          \begin{lstlisting}
+wget https://github.com/SterbenVD/AI1110-Assignments/blob/main/Assignment\%20-\%20Random\%20Numbers/codes/7-1_semilog.py
+                        \end{lstlisting}
+    \item Assuming that $N$ is a constant, find an expression for $P_e$. Call this $P_e(N)$.
+          \solution
+          We rewrite the previous expression for $P_e$ as
+          \begin{align}
+              P_e(N) & = \pr{A + N < 0 } = F_A(-N) \\
+                     & =
+              \begin{cases}
+                  1 - e^{-\frac{N^2}{\gamma}} & N \leq 0 \\
+                  0                           & N > 0
+              \end{cases}
+          \end{align}
+    \item For a function $g$,
+          \begin{align}
+              E\sbrak{g(X)} = \int_{-\infty}^{\infty}g(x)p_X(x)dx
+          \end{align}
+          Find $P_e = E\sbrak{P_e(N)}$.
+          \solution
+          We write,
+          \begin{align}
+              P_e & = \int_{0}^{\infty}F_A(x)f_N(x)dx                                                                            \\
+                  & = \int_{0}^{\infty}(1 - e^{-\frac{x^2}{\gamma}})\frac{1}{\sqrt{2\pi}}e^{-\frac{x^2}{2}}dx                    \\
+                  & = \frac{1}{2} - \frac{1}{\sqrt{2\pi}}\int_{0}^{\infty}\exp{\brak{-\frac{x^2}{\frac{2\gamma}{\gamma + 2}}}}dx \\
+                  & = \frac{1}{2}\brak{1 - \sqrt{\frac{\gamma}{\gamma + 2}}}
+              \label{eq:err-ral}
+          \end{align}
+          where $f_N$ denotes the standard normal distribution.
+    \item Plot $P_e$ in problems 7.1 and 7.3 on the same graph w.r.t $\gamma$. Comment.
+          \solution Since $P_{e|0} = E\sbrak{P_e(N)}$ , the error rate is independent of the noise.
+\end{enumerate}
+\section{Two Dimensions}
+\noindent Let
+\begin{align}
+    \vec{y} = A\vec{x} + \vec{n}
+\end{align}
+where
+\begin{align}
+    \vec{x} \in \brak{\vec{s}_0, \vec{s}_1}, \vec{s}_0 = \myvec{1 \\ 0}, \vec{s}_1 = \myvec{0 \\ 1} \\
+    \vec{n} = \myvec{n_1                                          \\ n_2}, n_1, n_2 \sim \gauss{0}{1}
+\end{align}
+\begin{enumerate}[label=\thesection.\arabic*
+        ,ref=\thesection.\theenumi]
+    \item Plot $\vec{y}|\vec{s_0}$ and $\vec{y}|\vec{s_1}$ on the same graph using a scatter plot.
+          \solution Download the following files and execute the \gitlink{codes/8-1.c}{C program} or type in terminal:
+          \begin{lstlisting}
+wget https://github.com/SterbenVD/AI1110-Assignments/blob/main/Assignment\%20-\%20Random\%20Numbers/codes/8-1.c
+                    \end{lstlisting}
+          \begin{figure}[H]
+              \centering
+              \includegraphics[width = \columnwidth]{../figs/8-1.png}
+              \caption{Plot of $y_2$ vs $y_1$ at $A= 5dB$}
+              \label{fig:8-1}
+          \end{figure}
+          The following \gitlink{codes/8-1.py}{python code} plots Fig. \ref{fig:8-1} or type in terminal:
+          \begin{lstlisting}
+wget https://github.com/SterbenVD/AI1110-Assignments/blob/main/Assignment\%20-\%20Random\%20Numbers/codes/8-1.py
+                          \end{lstlisting}
+    \item For the above problem, find a decision rule for detecting the symbols $\vec{s}_0$ and $\vec{s}_1$.
+          \solution
+          Let $\vec{y} = \myvec{y_1 \\ y_2}$. By figure , $y_1 - y_2 = 0$ seperates the two plots. \\
+          Thus,
+          \begin{align}
+              \hat{\vec{x}} =
+              \begin{cases}
+                  \vec{s}_0 & y_1 > y_2 \\
+                  \vec{s}_1 & y_1 < y_2
+              \end{cases}
+          \end{align}
+    \item Plot
+          \begin{align}
+              P_e = \pr{\hat{\vec{x}} = \vec{s}_1 | \vec{x} = \vec{s}_0}
+          \end{align}
+          with respect to the SNR from 0 to 10 dB.
+          \solution
+          \begin{figure}[H]
+              \centering
+              \includegraphics[width = \columnwidth]{../figs/8-3.png}
+              \caption{Plot of $P_e$ w.r.t to $A$}
+              \label{fig:8-3}
+          \end{figure}
+          The following \gitlink{codes/8-3.py}{python code} plots Fig. \ref{fig:8-3} or type in terminal:
+          \begin{lstlisting}
+wget https://github.com/SterbenVD/AI1110-Assignments/blob/main/Assignment\%20-\%20Random\%20Numbers/codes/8-3.py
+                        \end{lstlisting}
+          \begin{figure}[H]
+              \centering
+              \includegraphics[width = \columnwidth]{../figs/8-3_semilog.png}
+              \caption{Semilog Plot of $P_e$ w.r.t to $A$}
+              \label{fig:8-3_semilog}
+          \end{figure}
+          The following \gitlink{codes/8-3_semilog.py}{python code} plots Fig. \ref{fig:8-3_semilog} or type in terminal:
+          \begin{lstlisting}
+wget https://github.com/SterbenVD/AI1110-Assignments/blob/main/Assignment\%20-\%20Random\%20Numbers/codes/8-3_semilog.py
+                                        \end{lstlisting}
+    \item Obtain an expression for $P_e$. Verify this by comparing the theory and simulation plots on the same graph.
+          \solution
+          We have,
+          \begin{align}
+              P_e & = \pr{\hat{\vec{x}} = \vec{s}_1 | \vec{x} = \vec{s}_0} \\
+                  & = \pr{y_1 < y_2 | \vec{x} = \vec{s}_0}                 \\
+                  & = \pr{A + n_1 < -A + n_2}                              \\
+                  & = \pr{n_2 - n_1 > 2A}                                  \\
+                  & = \pr{N > 2A} = \qfunc{2A}
+              \label{eq:p-e-2D}
+          \end{align}
+          where $N = n_2 - n_1 \sim \gauss{0}{2}$ and $\textrm{SNR} = \frac{E\sbrak{A^2}}{\sigma_N^2}$.
+\end{enumerate}
+\end{document}

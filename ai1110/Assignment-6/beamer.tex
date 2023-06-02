@@ -1,0 +1,127 @@
+\documentclass{beamer}
+\usetheme{CambridgeUS}
+\usepackage[utf8]{inputenc}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{mathrsfs}
+\usepackage{stfloats}
+\usepackage{bm}
+\usepackage{cite}
+\usepackage{cases}
+\usepackage{subfig}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{mathtools}
+\usepackage{tikz}
+\usepackage{circuitikz}
+\usepackage{verbatim}
+\usepackage{calc}
+\usepackage{float}
+\usepackage{longtable}
+\usepackage{multirow}
+\usepackage{multicol}
+\usepackage{color}
+\usepackage{array}
+\usepackage{hhline}
+\usepackage{ifthen}
+\usepackage{chngcntr}
+\usepackage{hyperref}
+
+\newcommand{\BEQA}{\begin{eqnarray}}
+\newcommand{\EEQA}{\end{eqnarray}}
+\newcommand{\define}{\stackrel{\triangle}{=}}
+\def\inputGnumericTable{}
+
+\let\vec\mathbf
+
+\providecommand{\pr}[1]{\ensuremath{\Pr\left(#1\right)}}
+\providecommand{\sbrak}[1]{\ensuremath{{}\left[#1\right]}}
+\providecommand{\lsbrak}[1]{\ensuremath{{}\left[#1\right.}}
+\providecommand{\rsbrak}[1]{\ensuremath{{}\left.#1\right]}}
+\providecommand{\brak}[1]{\ensuremath{\left(#1\right)}}
+\providecommand{\lbrak}[1]{\ensuremath{\left(#1\right.}}
+\providecommand{\rbrak}[1]{\ensuremath{\left.#1\right)}}
+\providecommand{\cbrak}[1]{\ensuremath{\left\{#1\right\}}}
+\providecommand{\lcbrak}[1]{\ensuremath{\left\{#1\right.}}
+\providecommand{\rcbrak}[1]{\ensuremath{\left.#1\right\}}}
+\providecommand{\abs}[1]{\left\vert#1\right\vert}
+\providecommand{\res}[1]{\Res\displaylimits_{#1}}
+\newcommand{\myvec}[1]{\ensuremath{\begin{pmatrix}#1\end{pmatrix}}}
+\newcommand{\mydet}[1]{\ensuremath{\begin{vmatrix}#1\end{vmatrix}}}
+
+\title{AI1110: Probability and Random Variables}
+\subtitle{Assignment 6}
+\author{Vishal Vijay Devadiga (CS21BTECH11061)}
+\date{\today}
+\begin{document}
+
+% Title page frame
+\begin{frame}
+    \titlepage
+\end{frame}
+
+% Remove logo from the next slides
+\logo{}
+
+% Outline frame
+\begin{frame}{Outline}
+    \tableofcontents
+\end{frame}
+
+% Beginning of Actual Doc
+\section{Question}
+\begin{frame}{Question}
+    Prove that if $E$ and $F$ are independent events, then so are the events $E$ and $F'$.
+\end{frame}
+
+\section{Solution}
+\subsection{Data Given from Question}
+\begin{frame}{Data Given from Question}
+    \begin{block}{Theory}
+        Probability of Intersection of 2 or more independent events is the product of probability of the events happening individually.
+    \end{block}
+    Given, $E$ and $F$ are independent events. Thus,
+    \begin{align}
+        \label{eq:1}
+        \pr{E F} = \pr{E} \times \pr{F}
+    \end{align}
+\end{frame}
+
+\subsection{Finding $EF'$}
+\begin{frame}{Finding $EF'$}
+    $F'$ and $F$ are mutually exclusive events. $E$ can be expressed such as:
+    \begin{align}
+        E = EF + EF'
+    \end{align}
+    $EF$ and $EF'$ are also mutually exclusive events. Therefore,
+    \begin{align}
+        \pr{E}            & = \pr{EF} + \pr{EF'}
+        \\
+        \label{eq:2}
+        \implies \pr{EF'} & = \pr{E} - \pr{EF}
+    \end{align}
+\end{frame}
+
+\subsection{Result}
+\begin{frame}{Result}
+    Using \eqref{eq:1} and \eqref{eq:2}, we get,
+    \begin{align}
+        \pr{EF'} & = \pr{E} - \pr{E} \times \pr{F}
+        \\
+                 & = \pr{E}\brak{1 - \pr{F}}
+        \\
+        \label{eq:result}
+        \pr{EF'} & = \pr{E} \times \pr{F'}
+    \end{align}
+    By \eqref{eq:result}, it can be concluded that $E$ and $F'$ are independent events.
+\end{frame}
+
+%\section{Code}
+%\begin{frame}{Code}
+%	Output of the program used to verify whether the solution is correct:
+%	\begin{figure}[H]
+%		\centering
+%		\includegraphics[width=\columnwidth]{../figs/prog.png}
+%	\end{figure}
+%\end{frame}
+\end{document}

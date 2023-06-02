@@ -1,0 +1,114 @@
+\documentclass{beamer}
+\usetheme{CambridgeUS}
+\usepackage[utf8]{inputenc}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{mathrsfs}
+\usepackage{stfloats}
+\usepackage{bm}
+\usepackage{cite}
+\usepackage{cases}
+\usepackage{subfig}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{mathtools}
+\usepackage{tikz}
+\usepackage{circuitikz}
+\usepackage{verbatim}
+\usepackage{calc}
+\usepackage{float}
+\usepackage{longtable}
+\usepackage{multirow}
+\usepackage{multicol}
+\usepackage{color}
+\usepackage{array}
+\usepackage{hhline}
+\usepackage{ifthen}
+\usepackage{chngcntr}
+\usepackage{hyperref}
+
+\newcommand{\BEQA}{\begin{eqnarray}}
+\newcommand{\EEQA}{\end{eqnarray}}
+\newcommand{\define}{\stackrel{\triangle}{=}}
+\def\inputGnumericTable{}
+
+\let\vec\mathbf
+\providecommand{\ovl}[1]{\ensuremath{\overline{#1}}}
+\providecommand{\pr}[1]{\ensuremath{\Pr\left(#1\right)}}
+\providecommand{\sbrak}[1]{\ensuremath{{}\left[#1\right]}}
+\providecommand{\lsbrak}[1]{\ensuremath{{}\left[#1\right.}}
+\providecommand{\rsbrak}[1]{\ensuremath{{}\left.#1\right]}}
+\providecommand{\brak}[1]{\ensuremath{\left(#1\right)}}
+\providecommand{\lbrak}[1]{\ensuremath{\left(#1\right.}}
+\providecommand{\rbrak}[1]{\ensuremath{\left.#1\right)}}
+\providecommand{\cbrak}[1]{\ensuremath{\left\{#1\right\}}}
+\providecommand{\lcbrak}[1]{\ensuremath{\left\{#1\right.}}
+\providecommand{\rcbrak}[1]{\ensuremath{\left.#1\right\}}}
+\providecommand{\abs}[1]{\left\vert#1\right\vert}
+\providecommand{\res}[1]{\Res\displaylimits_{#1}}
+\newcommand{\myvec}[1]{\ensuremath{\begin{pmatrix}#1\end{pmatrix}}}
+\newcommand{\mydet}[1]{\ensuremath{\begin{vmatrix}#1\end{vmatrix}}}
+
+\title{AI1110: Probability and Random Variables}
+\subtitle{Assignment 11}
+\author{Vishal Vijay Devadiga (CS21BTECH11061)}
+\date{\today}
+\begin{document}
+
+% Title page frame
+\begin{frame}
+    \titlepage
+\end{frame}
+
+% Remove logo from the next slides
+\logo{}
+
+% Outline frame
+\begin{frame}{Outline}
+    \tableofcontents
+\end{frame}
+
+% Beginning of Actual Doc
+\section{Question}
+\begin{frame}{Question}
+    Every Stochastic matrix corresponds to a Markov chain for which it is the one-step transition matrix. \\
+    Show that not every Stochastic matrix can correspond to the two-step transition matrix of a Markov chain. \\ 
+    In particular, a 2 x 2 stochastic matrix is the two-step transition matrix of a Markov chain if and only if the sum of its diagonal elements is greater than or equal to Unity.
+\end{frame}
+
+\section{Solution}
+\subsection{Theory}
+\begin{frame}{Theory}
+    If a stochastic matrix $A =\myvec{a_{ij}}$ where $a_{ij} > 0$, 
+    corresponds to the two-step transition matrix of a Markov chain, 
+    then there must exist another stochastic matrix $P =\myvec{p_{ij}}$ where $p_{ij} > 0$ 
+    such that:
+    \begin{align}
+        A = P^2
+    \end{align}
+    Also,
+    \begin{align}
+        \sum^{ }_{j} p_{ij} = 1
+    \end{align}
+\end{frame}
+
+\subsection{Proof}
+\begin{frame}{Proof}
+    In a two state chain, let $P = \myvec{\alpha & 1 - \alpha \\ 1 - \beta & \beta}$
+    so that,
+    \begin{align}
+        A = P^2 =
+        \myvec{\alpha^2 + (1 - \alpha)(1 - \beta ) & (\alpha + \beta )(1 - \alpha) \\ (\alpha + \beta )(1 - \beta) & \beta^2 + (1 - \alpha)(1 - \beta)}
+    \end{align}
+    This gives the sum of this its diagonal entries to be:
+    \begin{align}
+        a_{11} + a_{22} &= \alpha^2 + 2(1 - \alpha)(1 - \beta )+ \beta^2
+        \\
+        &= (\alpha + \beta)^2 - 2(\alpha + \beta ) + 2 
+        \\
+        \label{eq:condition}
+        &= 1+(\alpha + \beta - 1)^2 \geq 1 
+    \end{align}
+    Hence proved.
+\end{frame}
+\end{document}
