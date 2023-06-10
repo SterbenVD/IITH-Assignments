@@ -1,5 +1,5 @@
 # IITH-Assignments
-My Assignment Submissions of relevent courses at IITH
+My Assignment Submissions of relevent courses and clubs at IITH
 
 Courses:
 
@@ -12,3 +12,9 @@ Courses:
 - MA2140: Statistics
 - CS3510: OS-1
 - CS3523: OS-2
+
+Clubs:
+
+- TL: Tinkerer's Lab
+- Glitch: Game Development Club
+- Lambda: Software Development Club
