@@ -17,4 +17,4 @@ Clubs:
 
 - TL: Tinkerer's Lab
 - Glitch: Game Development Club
-- Lambda: Software Development Club
+- Lambda: Software Development Club# chessai
