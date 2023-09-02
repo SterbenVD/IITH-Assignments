@@ -1,0 +1,61 @@
+label: pp1
+punctuation: :
+datatype: null
+id: errcase
+special symbol: (
+special symbol: )
+label: pp2
+punctuation: :
+special symbol: [
+label: pp3
+punctuation: :
+datatype: character_1
+id: c
+id: !1
+operator:  = 
+punctuation: '
+constant: a
+punctuation: '
+punctuation: ,
+id: c
+id: !2
+operator:  = 
+punctuation: '
+constant: z
+punctuation: '
+punctuation: ;
+label: pp4
+punctuation: :
+reserved keyword: in case that
+special symbol: [
+id: c
+id: !1
+reserved keyword: lt
+id: c
+id: !2
+special symbol: ]
+label: pp5
+punctuation: :
+reserved keyword: do
+special symbol: [
+label: pp6
+punctuation: :
+id: c
+id: !1
+operator:  = 
+id: c
+id: !1
+operator:  + 
+constant: 1
+punctuation: ;
+label: pp7
+punctuation: :
+reserved keyword: jump to
+label: pp4
+punctuation: ;
+label: pp8
+punctuation: :
+special symbol: ]
+label: pp9
+punctuation: :
+special symbol: ]

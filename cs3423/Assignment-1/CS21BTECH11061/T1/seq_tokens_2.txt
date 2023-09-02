@@ -1,0 +1,62 @@
+label: pp1
+punctuation: :
+datatype: integer_2
+id: summer
+special symbol: (
+datatype: integer_2
+id: x1
+special symbol: )
+label: pp2
+punctuation: :
+special symbol: [
+label: pp3
+punctuation: :
+datatype: integer_2
+id: _ans
+operator:  = 
+constant: 0
+punctuation: ;
+label: pp4
+punctuation: :
+reserved keyword: in case that
+special symbol: [
+id: x1
+reserved keyword: gt
+constant: 0
+special symbol: ]
+label: pp5
+punctuation: :
+reserved keyword: do
+special symbol: [
+label: pp6
+punctuation: :
+id: _ans
+operator:  = 
+id: _ans
+operator:  + 
+id: x1
+punctuation: ;
+label: pp7
+punctuation: :
+id: x1
+operator:  = 
+id: x1
+operator:  - 
+constant: 1
+punctuation: ;
+label: pp8
+punctuation: :
+reserved keyword: jump to
+label: pp4
+punctuation: ;
+label: pp9
+punctuation: :
+special symbol: ]
+label: pp10
+punctuation: :
+reserved keyword: return
+id: _ans
+punctuation: ;
+label: pp11
+punctuation: :
+special symbol: ]

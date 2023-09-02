@@ -1,0 +1,9 @@
+pp1 : null errcase ()
+pp2 : [
+pp3 :   character_1 c!1 = 'a', c!2 = 'z';
+pp4 :   in case that [ c!1 lt c!2 ]
+pp5 :       do [
+pp6 :           c!1 = c!1 + 1;
+pp7 :           jump to pp4;
+pp8 :       ]
+pp9 : ]

@@ -1,0 +1,97 @@
+label: pp1
+punctuation: :
+datatype: integer_2
+id: recur
+special symbol: (
+datatype: integer_2
+id: !1x
+punctuation: ,
+datatype: character_1
+id: op
+special symbol: )
+label: pp2
+punctuation: :
+special symbol: [
+label: pp3
+punctuation: :
+reserved keyword: in case that
+special symbol: [
+id: !1x
+reserved keyword: lteq
+constant: 0
+reserved keyword: or
+id: op
+reserved keyword: eq
+punctuation: '
+constant: R
+punctuation: '
+special symbol: ]
+reserved keyword: do
+label: pp4
+punctuation: :
+reserved keyword: return
+constant: 0
+punctuation: ;
+label: pp5
+punctuation: :
+datatype: integer_2
+id: ans
+operator:  = 
+constant: 0
+punctuation: ;
+label: pp6
+punctuation: :
+reserved keyword: in case that
+special symbol: [
+id: op
+reserved keyword: eq
+punctuation: '
+constant: D
+punctuation: '
+special symbol: ]
+label: pp7
+punctuation: :
+reserved keyword: do
+id: ans
+operator:  = 
+id: ans
+operator:  + 
+id: recur
+special symbol: (
+id: !1x
+operator:  - 
+constant: 1
+punctuation: ,
+punctuation: '
+constant: L
+punctuation: '
+special symbol: )
+punctuation: ;
+label: pp8
+punctuation: :
+reserved keyword: otherwise
+id: ans
+operator:  = 
+id: ans
+operator:  - 
+id: recur
+special symbol: (
+id: !1x
+operator:  - 
+constant: 1
+punctuation: ,
+punctuation: '
+constant: D
+punctuation: '
+special symbol: )
+punctuation: ;
+label: pp9
+punctuation: :
+reserved keyword: return
+id: ans
+operator:  + 
+constant: 10
+punctuation: ;
+label: pp10
+punctuation: :
+special symbol: ]

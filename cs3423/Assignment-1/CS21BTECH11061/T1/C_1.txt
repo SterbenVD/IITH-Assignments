@@ -1,0 +1,10 @@
+  short recur (short !1x, char op)
+  {
+    if (!1x <= 0 || op == 'R') 
+        return 0;
+    short ans = 0;
+    if (op == 'D')
+         ans = ans + recur(!1x - 1, 'L');
+        else ans = ans - recur(!1x - 1, 'D');
+    return ans + 10;
+ }

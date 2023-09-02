@@ -1,0 +1,10 @@
+pp1 : integer_2 recur (integer_2 !1x, character_1 op)
+pp2 : [
+pp3 :   in case that [!1x lteq 0 or op eq 'R'] do
+pp4 :       return 0;
+pp5 :   integer_2 ans = 0;
+pp6 :   in case that [op eq 'D']
+pp7 :       do ans = ans + recur(!1x - 1, 'L');
+pp8 :       otherwise ans = ans - recur(!1x - 1, 'D');
+pp9 :   return ans + 10;
+pp10: ]

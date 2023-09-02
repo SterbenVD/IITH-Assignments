@@ -1,0 +1,11 @@
+pp1 : integer_2 summer (integer_2 x1)
+pp2 : [
+pp3 :   integer_2 _ans = 0;
+pp4 :   in case that [ x1 gt 0 ]
+pp5 :       do [
+pp6 :           _ans = _ans + x1;
+pp7 :           x1 = x1 - 1; 
+pp8 :           jump to pp4;
+pp9 :       ]
+pp10:   return _ans;
+pp11: ]

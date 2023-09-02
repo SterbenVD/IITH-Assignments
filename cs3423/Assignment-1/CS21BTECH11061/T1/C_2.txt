@@ -1,0 +1,11 @@
+  short summer (short x1)
+  {
+    short _ans = 0;
+    if ( x1 > 0 )
+         {
+            _ans = _ans + x1;
+            x1 = x1 - 1; 
+            goto pp4;
+        }
+   return _ans;
+ }
