@@ -1,0 +1,58 @@
+% [whois.apnic.net]
+% Whois data copyright terms    http://www.apnic.net/db/dbcopyright.html
+
+% Information related to '125.18.92.0 - 125.18.92.255'
+
+% Abuse contact for '125.18.92.0 - 125.18.92.255' is 'dsltac2north.unoc@airtel.com'
+
+inetnum:        125.18.92.0 - 125.18.92.255
+netname:        BTNL-MUM-DSL
+descr:          Bharti Infotel Ltd. (BB&TS) Mumbai
+descr:          usiness park 5th floor
+descr:          Chincholi naka,S V Road, Malad West
+descr:          Mumbai
+descr:          Maharashtra
+descr:          India
+descr:          Contact Person: S Siva Prasad Reddy
+descr:          Email: sivaprasad.reddy@airtel.in
+descr:          Phone:+91-22-40038215
+country:        IN
+admin-c:        NA40-AP
+tech-c:         NA40-AP
+mnt-by:         MAINT-IN-BBIL
+status:         ASSIGNED NON-PORTABLE
+last-modified:  2008-09-04T07:10:22Z
+source:         APNIC
+
+person:         Network Administrator
+nic-hdl:        NA40-AP
+e-mail:         noc-dataprov@airtel.com
+address:        Bharti Airtel Ltd.
+address:        ISP Division - Transport Network Group
+address:        Plot no.16 , Udyog Vihar , Phase -IV , Gurgaon - 122015 , Haryana , INDIA
+address:        Phase III, New Delhi-110020, INDIA
+phone:          +91-124-4222222
+fax-no:         +91-124-4244017
+country:        IN
+mnt-by:         MAINT-IN-BBIL
+last-modified:  2018-12-18T12:52:19Z
+source:         APNIC
+
+% Information related to '125.18.92.0/24AS9498'
+
+route:          125.18.92.0/24
+descr:          BHARTI-IN
+descr:          Bharti Tele-Ventures Limited
+descr:          Class A ISP in INDIA .
+descr:          234 , OKHLA PHASE III ,
+descr:          NEW DELHI
+descr:          INDIA
+country:        IN
+origin:         AS9498
+mnt-by:         MAINT-IN-BBIL
+last-modified:  2008-09-04T07:54:36Z
+source:         APNIC
+
+% This query was served by the APNIC Whois Service version 1.88.23-SNAPSHOT (WHOIS-JP3)
+
+

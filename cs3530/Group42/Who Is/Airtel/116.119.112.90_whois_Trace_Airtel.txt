@@ -1,0 +1,75 @@
+% [whois.apnic.net]
+% Whois data copyright terms    http://www.apnic.net/db/dbcopyright.html
+
+% Information related to '116.119.0.0 - 116.119.127.0'
+
+% Abuse contact for '116.119.0.0 - 116.119.127.0' is 'DSLTAC2NORTH.UNOC@airtel.com'
+
+inetnum:        116.119.0.0 - 116.119.127.0
+netname:        BHARTITELESONIC
+descr:          BHARTI TELESONIC INFRASTRUCTURE
+descr:          234 Okhla Industrial Area,
+descr:          Phase- III, New Delhi - 110020, India
+descr:          New Delhi
+country:        IN
+admin-c:        SG103-AP
+tech-c:         SG103-AP
+abuse-c:        AB1107-AP
+status:         ASSIGNED NON-PORTABLE
+mnt-by:         MAINT-IN-BTSOL
+mnt-irt:        IRT-BHARTITELESONIC-IN
+last-modified:  2021-03-31T13:02:41Z
+source:         APNIC
+
+irt:            IRT-BHARTITELESONIC-IN
+address:        Plot No. 16, Udyog Vihar
+address:        Phase 4
+address:        Gurgaon-122001
+address:        India
+e-mail:         Shankar.B@airtel.com
+abuse-mailbox:  DSLTAC2NORTH.UNOC@airtel.com
+admin-c:        SG103-AP
+tech-c:         SG103-AP
+auth:           # Filtered
+remarks:        shankar.b@airtel.com was validated on 2023-03-17
+remarks:        dsltac2north.unoc@airtel.com was validated on 2023-08-15
+mnt-by:         MAINT-IN-BTSOL
+last-modified:  2023-08-15T05:43:26Z
+source:         APNIC
+
+role:           ABUSE BHARTITELESONICIN
+address:        Plot No. 16, Udyog Vihar
+address:        Phase 4
+address:        Gurgaon-122001
+address:        India
+country:        ZZ
+phone:          +000000000
+e-mail:         Shankar.B@airtel.com
+admin-c:        SG103-AP
+tech-c:         SG103-AP
+nic-hdl:        AB1107-AP
+remarks:        Generated from irt object IRT-BHARTITELESONIC-IN
+remarks:        shankar.b@airtel.com was validated on 2023-03-17
+remarks:        dsltac2north.unoc@airtel.com was validated on 2023-08-15
+abuse-mailbox:  DSLTAC2NORTH.UNOC@airtel.com
+mnt-by:         APNIC-ABUSE
+last-modified:  2023-08-15T12:30:19Z
+source:         APNIC
+
+person:         Shailesh Gupta
+address:        F-89/6 Okhla Industrial Area
+address:        Phase - 1
+address:        Delhi -110020
+address:        India
+country:        IN
+phone:          +91-11-6815770
+fax-no:         +91-11-6817557
+e-mail:         apnic@bhartitelesonic.com
+nic-hdl:        SG103-AP
+mnt-by:         MAINT-IN-BTSOL
+last-modified:  2016-04-26T01:03:37Z
+source:         APNIC
+
+% This query was served by the APNIC Whois Service version 1.88.23-SNAPSHOT (WHOIS-JP3)
+
+

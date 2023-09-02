@@ -1,0 +1,101 @@
+% [whois.apnic.net]
+% Whois data copyright terms    http://www.apnic.net/db/dbcopyright.html
+
+% Information related to '103.102.166.0 - 103.102.166.255'
+
+% Abuse contact for '103.102.166.0 - 103.102.166.255' is 'abuse@wikimedia.org'
+
+inetnum:        103.102.166.0 - 103.102.166.255
+netname:        WIKIMEDIA-AP
+descr:          Wikimedia Foundation, Inc.
+country:        US
+org:            ORG-WFI1-AP
+admin-c:        WFIA1-AP
+tech-c:         WFIA1-AP
+abuse-c:        AW950-AP
+status:         ASSIGNED PORTABLE
+remarks:        --------------------------------------------------------
+remarks:        To report network abuse, please contact mnt-irt
+remarks:        For troubleshooting, please contact tech-c and admin-c
+remarks:        Report invalid contact via www.apnic.net/invalidcontact
+remarks:        --------------------------------------------------------
+mnt-by:         APNIC-HM
+mnt-routes:     MAINT-WIKIMEDIA-AP
+mnt-irt:        IRT-WIKIMEDIA-AP
+last-modified:  2020-07-07T14:13:05Z
+source:         APNIC
+
+irt:            IRT-WIKIMEDIA-AP
+address:        1 Montgomery Street
+address:        Suite 1600
+address:        San Francisco, CA 94104
+address:        US
+e-mail:         abuse@wikimedia.org
+abuse-mailbox:  abuse@wikimedia.org
+admin-c:        WFIA1-AP
+tech-c:         WFIA1-AP
+auth:           # Filtered
+remarks:        abuse@wikimedia.org was validated on 2023-07-25
+mnt-by:         MAINT-WIKIMEDIA-AP
+last-modified:  2023-07-25T13:12:17Z
+source:         APNIC
+
+organisation:   ORG-WFI1-AP
+org-name:       Wikimedia Foundation, Inc.
+country:        US
+address:        1 Montgomery Street
+address:        Suite 1600
+phone:          +1-415-839-6885
+fax-no:         +1-415-882-0495
+e-mail:         noc@wikimedia.org
+mnt-ref:        APNIC-HM
+mnt-by:         APNIC-HM
+last-modified:  2017-10-18T12:56:36Z
+source:         APNIC
+
+role:           ABUSE WIKIMEDIAAP
+address:        1 Montgomery Street
+address:        Suite 1600
+address:        San Francisco, CA 94104
+address:        US
+country:        ZZ
+phone:          +000000000
+e-mail:         abuse@wikimedia.org
+admin-c:        WFIA1-AP
+tech-c:         WFIA1-AP
+nic-hdl:        AW950-AP
+remarks:        Generated from irt object IRT-WIKIMEDIA-AP
+remarks:        abuse@wikimedia.org was validated on 2023-07-25
+abuse-mailbox:  abuse@wikimedia.org
+mnt-by:         APNIC-ABUSE
+last-modified:  2023-07-25T13:12:54Z
+source:         APNIC
+
+role:           Wikimedia Foundation Inc administrator
+address:        1 Montgomery Street
+address:        Suite 1600
+address:        San Francisco, CA 94104
+country:        US
+phone:          +1-415-839-6885
+e-mail:         noc@wikimedia.org
+admin-c:        WFIA1-AP
+tech-c:         WFIA1-AP
+nic-hdl:        WFIA1-AP
+mnt-by:         MAINT-WIKIMEDIA-AP
+last-modified:  2017-10-20T11:32:27Z
+source:         APNIC
+
+% Information related to '103.102.166.0/24AS14907'
+
+route:          103.102.166.0/24
+origin:         AS14907
+descr:          Wikimedia Foundation, Inc.
+                1 Montgomery Street
+                Suite 1600
+mnt-by:         MAINT-WIKIMEDIA-AP
+last-modified:  2018-01-24T00:45:12Z
+source:         APNIC
+
+% This query was served by the APNIC Whois Service version 1.88.23-SNAPSHOT (WHOIS-JP3)
+
+

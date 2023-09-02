@@ -1,0 +1,136 @@
+% [whois.apnic.net]
+% Whois data copyright terms    http://www.apnic.net/db/dbcopyright.html
+
+% Information related to '218.248.6.128 - 218.248.6.159'
+
+% Abuse contact for '218.248.6.128 - 218.248.6.159' is 'abuse1@bsnl.co.in'
+
+inetnum:        218.248.6.128 - 218.248.6.159
+netname:        IIT-MEDAK
+descr:          Indian institute of technology, yeddumallaram, medak dist, hyd
+descr:          Indian institute of technology, yeddumallaram
+descr:          medak dist, hyd
+descr:
+country:        IN
+admin-c:        RIH1-AP
+admin-c:        NC83-AP
+tech-c:         RK508-AP
+tech-c:         CDN1-AP
+abuse-c:        AB1061-AP
+status:         ASSIGNED NON-PORTABLE
+mnt-by:         MAINT-IN-DOT
+mnt-irt:        IRT-BSNL-IN
+last-modified:  2021-07-15T07:17:15Z
+source:         APNIC
+
+irt:            IRT-BSNL-IN
+address:        Internet Cell
+address:        Bharat Sanchar Nigam Limited.
+address:        8th Floor,148-B Statesman House
+address:        Barakhamba Road, New Delhi - 110 001
+e-mail:         abuse1@bsnl.co.in
+abuse-mailbox:  abuse1@bsnl.co.in
+admin-c:        NC83-AP
+tech-c:         CGMD1-AP
+auth:           # Filtered
+remarks:        abuse1@bsnl.co.in was validated on 2023-05-24
+mnt-by:         MAINT-IN-DOT
+last-modified:  2023-05-24T07:12:23Z
+source:         APNIC
+
+role:           ABUSE BSNLIN
+address:        Internet Cell
+address:        Bharat Sanchar Nigam Limited.
+address:        8th Floor,148-B Statesman House
+address:        Barakhamba Road, New Delhi - 110 001
+country:        ZZ
+phone:          +000000000
+e-mail:         abuse1@bsnl.co.in
+admin-c:        NC83-AP
+tech-c:         CGMD1-AP
+nic-hdl:        AB1061-AP
+remarks:        Generated from irt object IRT-BSNL-IN
+remarks:        abuse1@bsnl.co.in was validated on 2023-05-24
+abuse-mailbox:  abuse1@bsnl.co.in
+mnt-by:         APNIC-ABUSE
+last-modified:  2023-05-24T07:12:27Z
+source:         APNIC
+
+role:           CGM Data Networks
+address:        CTS Compound
+address:        Netaji Nagar
+address:        New Delhi- 110 023
+country:        IN
+phone:          +91-11-24106782
+phone:          +91-11-24102119
+fax-no:         +91-11-26116783
+fax-no:         +91-11-26887888
+e-mail:         dnwplg@bsnl.co.in
+e-mail:         hostmaster@bsnl.co.in
+admin-c:        CGMD1-AP
+tech-c:         DT197-AP
+tech-c:         BH155-AP
+nic-hdl:        CDN1-AP
+mnt-by:         MAINT-IN-DOT
+last-modified:  2021-12-08T11:06:57Z
+source:         APNIC
+
+role:           NS Cell
+address:        Internet Cell
+address:        Bharat Sanchar Nigam Limited
+address:        8th Floor,148-B Statesman House
+address:        Barakhamba Road, New Delhi - 110 001
+country:        IN
+phone:          +91-11-23734057
+phone:          +91-11-23710183
+fax-no:         +91-11-23734052
+e-mail:         hostmaster@bsnl.co.in
+e-mail:         abuse1@bsnl.co.in
+admin-c:        CGMD1-AP
+tech-c:         DT197-AP
+nic-hdl:        NC83-AP
+mnt-by:         MAINT-IN-DOT
+last-modified:  2022-03-16T10:12:22Z
+source:         APNIC
+
+person:         Registrar IIT Hyderabad
+nic-hdl:        RIH1-AP
+address:        Indian institute of technology, yeddumallaram
+address:        medak dist, hyd
+address:
+phone:          +91-40-23016014
+fax-no:         +91-40-23016032
+country:        IN
+e-mail:         registrar@iith.ac.in
+mnt-by:         MAINT-IN-PER-DOT
+last-modified:  2014-08-27T10:10:03Z
+source:         APNIC
+
+person:         Raguraman K
+nic-hdl:        RK508-AP
+address:        Indian institute of technology, yeddumallaram
+address:        medak dist, hyd
+address:
+phone:          +91-9491040812
+fax-no:         +91-40-23016032
+country:        IN
+e-mail:         ragu@iith.ac.in
+mnt-by:         MAINT-IN-PER-DOT
+last-modified:  2014-08-27T10:10:03Z
+source:         APNIC
+
+% Information related to '218.248.0.0/20AS9829'
+
+route:          218.248.0.0/20
+descr:          BSNL Internet
+country:        IN
+origin:         AS9829
+mnt-lower:      MAINT-IN-DOT
+mnt-routes:     MAINT-IN-DOT
+mnt-by:         MAINT-IN-AS9829
+last-modified:  2008-09-04T07:54:45Z
+source:         APNIC
+
+% This query was served by the APNIC Whois Service version 1.88.23-SNAPSHOT (WHOIS-JP3)
+
+

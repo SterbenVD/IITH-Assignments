@@ -1,0 +1,93 @@
+% [whois.apnic.net]
+% Whois data copyright terms    http://www.apnic.net/db/dbcopyright.html
+
+% Information related to '115.240.0.0 - 115.247.255.255'
+
+% Abuse contact for '115.240.0.0 - 115.247.255.255' is 'ip.abuse@ril.com'
+
+inetnum:        115.240.0.0 - 115.247.255.255
+netname:        RELIANCEJIO-IN
+descr:          Reliance Jio Infocomm Limited
+country:        IN
+org:            ORG-RJIL1-AP
+admin-c:        RJIL1-AP
+tech-c:         RJIL1-AP
+abuse-c:        AR1022-AP
+status:         ALLOCATED PORTABLE
+remarks:        --------------------------------------------------------
+remarks:        To report network abuse, please contact mnt-irt
+remarks:        For troubleshooting, please contact tech-c and admin-c
+remarks:        Report invalid contact via www.apnic.net/invalidcontact
+remarks:        --------------------------------------------------------
+mnt-by:         APNIC-HM
+mnt-lower:      MAINT-IN-RELIANCEJIO
+mnt-routes:     MAINT-IN-RELIANCEJIO
+mnt-irt:        IRT-RELIANCEJIO-IN
+last-modified:  2020-08-19T13:07:29Z
+source:         APNIC
+
+irt:            IRT-RELIANCEJIO-IN
+address:        Reliance JIO INFOCOMM LTD GHANSOLI INDIA
+e-mail:         ip.abuse@ril.com
+abuse-mailbox:  ip.abuse@ril.com
+admin-c:        IBSP1-AP
+tech-c:         IBSP1-AP
+auth:           # Filtered
+remarks:        ip.abuse@ril.com was validated on 2023-05-12
+mnt-by:         MAINT-IN-RELIANCEJIO
+last-modified:  2023-05-12T04:22:23Z
+source:         APNIC
+
+organisation:   ORG-RJIL1-AP
+org-name:       Reliance Jio Infocomm Limited
+country:        IN
+address:        Reliance Coporate IT park LTD
+address:        Ghansoli NaviMumbai
+phone:          +912279670000
+fax-no:         +912279610099
+e-mail:         ip.management@ril.com
+mnt-ref:        APNIC-HM
+mnt-by:         APNIC-HM
+last-modified:  2017-11-15T12:56:20Z
+source:         APNIC
+
+role:           ABUSE RELIANCEJIOIN
+address:        Reliance JIO INFOCOMM LTD GHANSOLI INDIA
+country:        ZZ
+phone:          +000000000
+e-mail:         ip.abuse@ril.com
+admin-c:        IBSP1-AP
+tech-c:         IBSP1-AP
+nic-hdl:        AR1022-AP
+remarks:        Generated from irt object IRT-RELIANCEJIO-IN
+remarks:        ip.abuse@ril.com was validated on 2023-05-12
+abuse-mailbox:  ip.abuse@ril.com
+mnt-by:         APNIC-ABUSE
+last-modified:  2023-05-12T04:23:24Z
+source:         APNIC
+
+role:           Reliance Jio Infocomm Limited
+address:        Reliance JIO INFOCOMM LTD GHANSOLI INDIA
+country:        IN
+phone:          +91-44770000
+e-mail:         ip.management@ril.com
+admin-c:        RJIL1-AP
+tech-c:         RJIL1-AP
+nic-hdl:        RJIL1-AP
+mnt-by:         MAINT-IN-RELIANCEJIO
+last-modified:  2016-03-09T23:55:07Z
+source:         APNIC
+
+% Information related to '115.240.0.0/13AS55836'
+
+route:          115.240.0.0/13
+descr:          RJIL Internet IP Pool
+origin:         AS55836
+mnt-by:         MAINT-IN-RELIANCEJIO
+notify:         ip.abuse@ril.com
+last-modified:  2020-08-13T12:56:40Z
+source:         APNIC
+
+% This query was served by the APNIC Whois Service version 1.88.23-SNAPSHOT (WHOIS-JP1)
+
+

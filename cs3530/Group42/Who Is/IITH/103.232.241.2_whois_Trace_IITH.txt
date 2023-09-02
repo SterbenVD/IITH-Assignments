@@ -1,0 +1,83 @@
+% [whois.apnic.net]
+% Whois data copyright terms    http://www.apnic.net/db/dbcopyright.html
+
+% Information related to '103.232.241.0 - 103.232.241.255'
+
+% Abuse contact for '103.232.241.0 - 103.232.241.255' is 'sysad@iith.ac.in'
+
+inetnum:        103.232.241.0 - 103.232.241.255
+netname:        D3079306-AFIN
+descr:          IIT Hyderabad
+admin-c:        CI89-AP
+tech-c:         NA377-AP
+country:        IN
+mnt-by:         MAINT-IN-IRINN
+mnt-routes:     MAINT-IN-D3079306AFIN
+mnt-irt:        IRT-D3079306AFIN-IN
+status:         ASSIGNED PORTABLE
+last-modified:  2014-06-04T05:03:38Z
+source:         APNIC
+
+irt:            IRT-D3079306AFIN-IN
+address:        Computer Centre, IIT Hyderabad, ODF Campus, Eddumailaram
+phone:          +91 04023016014
+fax-no:         +91 04023016032
+e-mail:         sysad@iith.ac.in
+abuse-mailbox:  sysad@iith.ac.in
+admin-c:        CI89-AP
+tech-c:         NA377-AP
+auth:           # Filtered
+remarks:        send spam and abuse report to sysad@iith.ac.in
+irt-nfy:        sysad@iith.ac.in
+notify:         sysad@iith.ac.in
+mnt-by:         MAINT-IN-D3079306AFIN
+last-modified:  2014-06-04T04:49:00Z
+source:         APNIC
+
+role:           Network Administrator
+address:        Computer Centre, IIT Hyderabad, ODF Campus, Eddumailaram
+country:        IN
+phone:          +91 04023016014
+fax-no:         +91 04023016032
+e-mail:         ragu@iith.ac.in
+admin-c:        CI89-AP
+tech-c:         CI89-AP
+nic-hdl:        NA377-AP
+remarks:        send spam and abuse report to sysad@iith.ac.in
+notify:         sysad@iith.ac.in
+abuse-mailbox:  sysad@iith.ac.in
+mnt-by:         MAINT-IN-D3079306AFIN
+last-modified:  2014-06-04T04:46:45Z
+source:         APNIC
+
+person:         ComputerCentre IITHyderabad
+address:        Computer Centre, IIT Hyderabad, ODF Campus, Eddumailaram
+country:        IN
+phone:          +91 04023016014
+fax-no:         +91 04023016032
+e-mail:         sysad@iith.ac.in
+nic-hdl:        CI89-AP
+remarks:        send spam and abuse report to sysad@iith.ac.in
+notify:         sysad@iith.ac.in
+abuse-mailbox:  sysad@iith.ac.in
+mnt-by:         MAINT-IN-D3079306AFIN
+last-modified:  2014-06-04T04:43:45Z
+source:         APNIC
+
+% Information related to '103.232.241.0/24AS59193'
+
+route:          103.232.241.0/24
+descr:          route for 103.232.241.0/24 IIT-Hyderabad
+origin:         AS59193
+country:        IN
+remarks:        send spam and abuse report to sysad@iith.ac.in
+notify:         sysad@iith.ac.in
+mnt-lower:      MAINT-IN-D3079306AFIN
+mnt-routes:     MAINT-IN-D3079306AFIN
+mnt-by:         MAINT-IN-D3079306AFIN
+last-modified:  2014-07-07T09:44:22Z
+source:         APNIC
+
+% This query was served by the APNIC Whois Service version 1.88.23-SNAPSHOT (WHOIS-JP1)
+
+

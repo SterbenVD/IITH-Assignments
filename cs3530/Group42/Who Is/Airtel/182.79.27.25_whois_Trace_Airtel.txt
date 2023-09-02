@@ -1,0 +1,100 @@
+% [whois.apnic.net]
+% Whois data copyright terms    http://www.apnic.net/db/dbcopyright.html
+
+% Information related to '182.64.0.0 - 182.79.255.255'
+
+% Abuse contact for '182.64.0.0 - 182.79.255.255' is 'dsltac2north.unoc@airtel.com'
+
+inetnum:        182.64.0.0 - 182.79.255.255
+netname:        BHARTI-IN
+descr:          Bharti Airtel Limited
+descr:          Transport Network Group
+descr:          234, Okhla Phase III
+country:        IN
+org:            ORG-BAL1-AP
+admin-c:        NA40-AP
+tech-c:         NA40-AP
+abuse-c:        AB914-AP
+status:         ALLOCATED PORTABLE
+remarks:        --------------------------------------------------------
+remarks:        To report network abuse, please contact mnt-irt
+remarks:        For troubleshooting, please contact tech-c and admin-c
+remarks:        Report invalid contact via www.apnic.net/invalidcontact
+remarks:        --------------------------------------------------------
+notify:         ipspamsupport@Airtel.com
+mnt-by:         APNIC-HM
+mnt-lower:      MAINT-IN-BBIL
+mnt-routes:     MAINT-IN-BBIL
+mnt-irt:        IRT-BHARTI-TELEMEDIA-IN
+last-modified:  2020-05-16T21:37:21Z
+source:         APNIC
+
+irt:            IRT-BHARTI-TELEMEDIA-IN
+address:        Bharti Airtel Ltd.
+e-mail:         shankar.B@airtel.com
+abuse-mailbox:  dsltac2north.unoc@airtel.com
+admin-c:        NS282-AP
+tech-c:         NS282-AP
+auth:           # Filtered
+remarks:        shankar.b@airtel.com was validated on 2023-03-17
+remarks:        dsltac2north.unoc@airtel.com was validated on 2023-08-15
+mnt-by:         MAINT-IN-TELEMEDIA
+last-modified:  2023-08-15T05:43:26Z
+source:         APNIC
+
+organisation:   ORG-BAL1-AP
+org-name:       Bharti Airtel Limited
+country:        IN
+address:        Transport Network Group
+address:        234, Okhla Phase III
+phone:          +911244282398
+e-mail:         apnic@airtel.com
+mnt-ref:        APNIC-HM
+mnt-by:         APNIC-HM
+last-modified:  2020-10-27T12:55:20Z
+source:         APNIC
+
+role:           ABUSE BHARTITELEMEDIAIN
+address:        Bharti Airtel Ltd.
+country:        ZZ
+phone:          +000000000
+e-mail:         shankar.B@airtel.com
+admin-c:        NS282-AP
+tech-c:         NS282-AP
+nic-hdl:        AB914-AP
+remarks:        Generated from irt object IRT-BHARTI-TELEMEDIA-IN
+remarks:        shankar.b@airtel.com was validated on 2023-03-17
+remarks:        dsltac2north.unoc@airtel.com was validated on 2023-08-15
+abuse-mailbox:  dsltac2north.unoc@airtel.com
+mnt-by:         APNIC-ABUSE
+last-modified:  2023-08-15T07:19:14Z
+source:         APNIC
+
+person:         Network Administrator
+nic-hdl:        NA40-AP
+e-mail:         noc-dataprov@airtel.com
+address:        Bharti Airtel Ltd.
+address:        ISP Division - Transport Network Group
+address:        Plot no.16 , Udyog Vihar , Phase -IV , Gurgaon - 122015 , Haryana , INDIA
+address:        Phase III, New Delhi-110020, INDIA
+phone:          +91-124-4222222
+fax-no:         +91-124-4244017
+country:        IN
+mnt-by:         MAINT-IN-BBIL
+last-modified:  2018-12-18T12:52:19Z
+source:         APNIC
+
+% Information related to '182.79.27.0/24AS9498'
+
+route:          182.79.27.0/24
+origin:         AS9498
+descr:          Bharti Airtel Limited
+                Transport Network Group
+                234, Okhla Phase III
+mnt-by:         MAINT-IN-BBIL
+last-modified:  2021-04-01T10:59:34Z
+source:         APNIC
+
+% This query was served by the APNIC Whois Service version 1.88.23-SNAPSHOT (WHOIS-JP3)
+
+

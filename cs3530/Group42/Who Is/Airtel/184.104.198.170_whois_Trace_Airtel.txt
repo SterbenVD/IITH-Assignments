@@ -1,0 +1,145 @@
+
+#
+# ARIN WHOIS data and services are subject to the Terms of Use
+# available at: https://www.arin.net/resources/registry/whois/tou/
+#
+# If you see inaccuracies in the results, please report at
+# https://www.arin.net/resources/registry/whois/inaccuracy_reporting/
+#
+# Copyright 1997-2023, American Registry for Internet Numbers, Ltd.
+#
+
+
+NetRange:       184.104.0.0 - 184.105.255.255
+CIDR:           184.104.0.0/15
+NetName:        HURRICANE-11
+NetHandle:      NET-184-104-0-0-1
+Parent:         NET184 (NET-184-0-0-0-0)
+NetType:        Direct Allocation
+OriginAS:       AS6939
+Organization:   Hurricane Electric LLC (HURC)
+RegDate:        2010-05-10
+Updated:        2012-02-24
+Ref:            https://rdap.arin.net/registry/ip/184.104.0.0
+
+
+
+OrgName:        Hurricane Electric LLC
+OrgId:          HURC
+Address:        760 Mission Court
+City:           Fremont
+StateProv:      CA
+PostalCode:     94539
+Country:        US
+RegDate:        
+Updated:        2018-02-09
+Ref:            https://rdap.arin.net/registry/entity/HURC
+
+ReferralServer:  rwhois://rwhois.he.net:4321
+
+OrgAbuseHandle: ABUSE1036-ARIN
+OrgAbuseName:   Abuse Department
+OrgAbusePhone:  +1-510-580-4100 
+OrgAbuseEmail:  abuse@he.net
+OrgAbuseRef:    https://rdap.arin.net/registry/entity/ABUSE1036-ARIN
+
+OrgTechHandle: ZH17-ARIN
+OrgTechName:   Hurricane Electric
+OrgTechPhone:  +1-510-580-4100 
+OrgTechEmail:  hostmaster@he.net
+OrgTechRef:    https://rdap.arin.net/registry/entity/ZH17-ARIN
+
+RNOCHandle: ZH17-ARIN
+RNOCName:   Hurricane Electric
+RNOCPhone:  +1-510-580-4100 
+RNOCEmail:  hostmaster@he.net
+RNOCRef:    https://rdap.arin.net/registry/entity/ZH17-ARIN
+
+RAbuseHandle: ABUSE1036-ARIN
+RAbuseName:   Abuse Department
+RAbusePhone:  +1-510-580-4100 
+RAbuseEmail:  abuse@he.net
+RAbuseRef:    https://rdap.arin.net/registry/entity/ABUSE1036-ARIN
+
+RTechHandle: ZH17-ARIN
+RTechName:   Hurricane Electric
+RTechPhone:  +1-510-580-4100 
+RTechEmail:  hostmaster@he.net
+RTechRef:    https://rdap.arin.net/registry/entity/ZH17-ARIN
+
+
+#
+# ARIN WHOIS data and services are subject to the Terms of Use
+# available at: https://www.arin.net/resources/registry/whois/tou/
+#
+# If you see inaccuracies in the results, please report at
+# https://www.arin.net/resources/registry/whois/inaccuracy_reporting/
+#
+# Copyright 1997-2023, American Registry for Internet Numbers, Ltd.
+#
+
+
+
+Found a referral to rwhois.he.net:4321.
+
+%rwhois V-1.5:0012b7:00 concierge.he.net (HE-RWHOISd v:b9ccd6e)
+network:ID;I:NET-184.104.198.168/30
+network:Auth-Area:nets
+network:Class-Name:network
+network:Network-Name;I:NET-184.104.198.168/30
+network:Parent;I:NET-184.104.0.0/15
+network:IP-Network:184.104.198.168/30
+network:Org-Contact;I:POC-CE-7
+network:Tech-Contact;I:POC-HE-NOC
+network:Abuse-Contact;I:POC-HE-ABUSE
+network:NOC-Contact;I:POC-HE-NOC
+network:Created:20220307203029000
+network:Updated:20220307203029000
+
+contact:ID;I:POC-CE-7
+contact:Auth-Area:contacts
+contact:Class-Name:contact
+contact:Name:Network Operations
+contact:Company:Hurricane Electric
+contact:Street-Address:760 Mission Court
+contact:City:Fremont
+contact:Province:CA
+contact:Postal-Code:94539
+contact:Country-Code:US
+contact:Phone:-
+contact:E-Mail:-
+contact:Created:20180817203001000
+contact:Updated:20180817203001000
+
+contact:ID;I:POC-HE-NOC
+contact:Auth-Area:contacts
+contact:Class-Name:contact
+contact:Name:Network Operations Center
+contact:Company:Hurricane Electric
+contact:Street-Address:760 Mission Ct
+contact:City:Fremont
+contact:Province:CA
+contact:Postal-Code:94539
+contact:Country-Code:US
+contact:Phone:+1-510-580-4100
+contact:E-Mail:noc@he.net
+contact:Created:20100901200738000
+contact:Updated:20100901200738000
+
+contact:ID;I:POC-HE-ABUSE
+contact:Auth-Area:contacts
+contact:Class-Name:contact
+contact:Name:Abuse Department
+contact:Company:Hurricane Electric
+contact:Street-Address:760 Mission Ct
+contact:City:Fremont
+contact:Province:CA
+contact:Postal-Code:94539
+contact:Country-Code:US
+contact:Phone:+1-510-580-4100
+contact:E-Mail:abuse@he.net
+contact:Created:20100901200738000
+contact:Updated:20100901200738000
+contact:Comment:For email abuse (spam) only
+
+%ok

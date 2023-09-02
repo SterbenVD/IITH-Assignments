@@ -1,0 +1,14 @@
+traceroute to www.wikipedia.org (103.102.166.224), 30 hops max, 60 byte packets
+ 1  _gateway (192.168.139.213) [*]  5.073 ms  5.046 ms  5.041 ms
+ 2  192.0.0.1 (192.0.0.1) [AS6983]  7.296 ms  7.291 ms  7.287 ms
+ 3  * * *
+ 4  * * *
+ 5  * * *
+ 6  * * *
+ 7  * * *
+ 8  * * *
+ 9  * * *
+10  * * *
+11  * * *
+12  * * *
+13  text-lb.eqsin.wikimedia.org (103.102.166.224) [AS14907]  218.391 ms  218.386 ms  61.578 ms
