@@ -1,0 +1,29 @@
+class assignment [2]
+{
+declare int marks;
+local char grade()
+{
+in case that ( marks geq 90 )
+do
+{
+return 'A';
+}
+otherwise
+{
+return 'F';
+}
+}
+
+local void setmarks()
+{
+expr marks = 100;
+return void;
+}
+}
+
+global int main()
+{
+declare assignment curr;
+call curr->setmarks();
+return call curr->grade();
+}

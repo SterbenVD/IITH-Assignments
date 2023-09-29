@@ -1,0 +1,20 @@
+class stuff[2] : class definition
+{
+declare int obj; : declaration statement
+local void setobj[1](int x) : function definition
+{
+expr obj = mul(postincr(x), 2); : expression statement
+return void; : return statement
+}
+global int getobj() : function definition
+{
+return obj; : return statement
+}
+
+global int main() : function definition
+{
+declare stuff s; : declaration statement
+call s->setobj[1](5); : call statement with object
+call s->setobj[1](6); : call statement with object
+}
+Invalid statement

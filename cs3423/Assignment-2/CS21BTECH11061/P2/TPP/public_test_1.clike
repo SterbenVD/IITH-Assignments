@@ -1,0 +1,26 @@
+local int bar[1](int x)
+{
+declare int ans;
+expr ans = 0;
+loop for (expr i = 0; i leq x ; postincr(i))
+do
+{
+expr ans = add(ans , i);
+}
+return ans;
+}
+
+global int main()
+{
+declare int x, ans;
+expr x = 1;
+expr ans = 0;
+loop while (x leq 10)
+do
+{
+declare int ret;
+call bar[1](x);
+expr ans = mul(ans , ret);
+}
+return ans;
+}

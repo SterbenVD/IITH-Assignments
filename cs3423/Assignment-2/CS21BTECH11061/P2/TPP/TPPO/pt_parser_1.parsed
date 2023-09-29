@@ -1,0 +1,26 @@
+local int bar[1](int x) : function definition
+{
+declare int ans; : declaration statement
+expr ans = 0; : expression statement
+loop for (expr i = 0; i leq x ; postincr(i)) : loop statement
+do
+{
+expr ans = add(ans , i); : expression statement
+}
+return ans; : return statement
+}
+
+global int main() : function definition
+{
+declare int x, ans; : declaration statement
+expr x = 1; : expression statement
+expr ans = 0; : expression statement
+loop while (x leq 10) : loop statement
+do
+{
+declare int ret; : declaration statement
+call bar[1](x); : call statement
+expr ans = mul(ans , ret); : expression statement
+}
+return ans; : return statement
+}

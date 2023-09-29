@@ -1,0 +1,19 @@
+class stuff[2]
+{
+declare int obj;
+local void setobj[1](int x)
+{
+expr obj = mul(postincr(x), 2);
+return void;
+}
+global int getobj()
+{
+return obj;
+}
+
+global int main()
+{
+declare stuff s;
+call s->setobj[1](5);
+call s->setobj[1](6);
+}

@@ -1,0 +1,85 @@
+Name: Vishal Vijay Devadiga
+ID: CS21BTECH11061
+
+reserved keyword : class
+id : stuff
+special symbol : [
+constant : 2
+special symbol : ]
+special symbol : {
+reserved keyword : declare
+datatype : int
+id : obj
+punctuation : ;
+reserved keyword : local
+datatype : void
+id : setobj
+special symbol : [
+constant : 1
+special symbol : ]
+special symbol : (
+datatype : int
+id : x
+special symbol : )
+special symbol : {
+reserved keyword : expr
+id : obj
+operator : =
+operator : mul
+special symbol : (
+operator : postincr
+special symbol : (
+id : x
+special symbol : )
+punctuation : ,
+constant : 2
+special symbol : )
+punctuation : ;
+reserved keyword : return
+datatype : void
+punctuation : ;
+special symbol : }
+reserved keyword : global
+datatype : int
+id : getobj
+special symbol : (
+special symbol : )
+special symbol : {
+reserved keyword : return
+id : obj
+punctuation : ;
+special symbol : }
+reserved keyword : global
+datatype : int
+id : main
+special symbol : (
+special symbol : )
+special symbol : {
+reserved keyword : declare
+id : stuff
+id : s
+punctuation : ;
+reserved keyword : call
+id : s
+operator : ->
+id : setobj
+special symbol : [
+constant : 1
+special symbol : ]
+special symbol : (
+constant : 5
+special symbol : )
+punctuation : ;
+reserved keyword : call
+id : s
+operator : ->
+id : setobj
+special symbol : [
+constant : 1
+special symbol : ]
+special symbol : (
+constant : 6
+special symbol : )
+punctuation : ;
+special symbol : }
+Error at line number: 19

@@ -1,0 +1,29 @@
+class assignment [2] : class definition
+{
+declare int marks; : declaration statement
+local char grade() : function definition
+{
+in case that ( marks geq 90 ) : conditional statement
+do
+{
+return 'A'; : return statement
+}
+otherwise
+{
+return 'F'; : return statement
+}
+}
+
+local void setmarks() : function definition
+{
+expr marks = 100; : expression statement
+return void; : return statement
+}
+}
+
+global int main() : function definition
+{
+declare assignment curr; : declaration statement
+call curr->setmarks(); : call statement with object
+return call curr->grade(); : return statement
+}

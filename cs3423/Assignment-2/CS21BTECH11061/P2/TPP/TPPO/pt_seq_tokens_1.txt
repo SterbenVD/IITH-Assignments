@@ -1,0 +1,116 @@
+Name: Vishal Vijay Devadiga
+ID: CS21BTECH11061
+
+reserved keyword : local
+datatype : int
+id : bar
+special symbol : [
+constant : 1
+special symbol : ]
+special symbol : (
+datatype : int
+id : x
+special symbol : )
+special symbol : {
+reserved keyword : declare
+datatype : int
+id : ans
+punctuation : ;
+reserved keyword : expr
+id : ans
+operator : =
+constant : 0
+punctuation : ;
+reserved keyword : loop
+reserved keyword : for
+special symbol : (
+reserved keyword : expr
+id : i
+operator : =
+constant : 0
+punctuation : ;
+id : i
+reserved keyword : leq
+id : x
+punctuation : ;
+operator : postincr
+special symbol : (
+id : i
+special symbol : )
+special symbol : )
+reserved keyword : do
+special symbol : {
+reserved keyword : expr
+id : ans
+operator : =
+operator : add
+special symbol : (
+id : ans
+punctuation : ,
+id : i
+special symbol : )
+punctuation : ;
+special symbol : }
+reserved keyword : return
+id : ans
+punctuation : ;
+special symbol : }
+reserved keyword : global
+datatype : int
+id : main
+special symbol : (
+special symbol : )
+special symbol : {
+reserved keyword : declare
+datatype : int
+id : x
+punctuation : ,
+id : ans
+punctuation : ;
+reserved keyword : expr
+id : x
+operator : =
+constant : 1
+punctuation : ;
+reserved keyword : expr
+id : ans
+operator : =
+constant : 0
+punctuation : ;
+reserved keyword : loop
+reserved keyword : while
+special symbol : (
+id : x
+reserved keyword : leq
+constant : 10
+special symbol : )
+reserved keyword : do
+special symbol : {
+reserved keyword : declare
+datatype : int
+id : ret
+punctuation : ;
+reserved keyword : call
+id : bar
+special symbol : [
+constant : 1
+special symbol : ]
+special symbol : (
+id : x
+special symbol : )
+punctuation : ;
+reserved keyword : expr
+id : ans
+operator : =
+operator : mul
+special symbol : (
+id : ans
+punctuation : ,
+id : ret
+special symbol : )
+punctuation : ;
+special symbol : }
+reserved keyword : return
+id : ans
+punctuation : ;
+special symbol : }

@@ -1,0 +1,84 @@
+Name: Vishal Vijay Devadiga
+ID: CS21BTECH11061
+
+reserved keyword : class
+id : assignment
+special symbol : [
+constant : 2
+special symbol : ]
+special symbol : {
+reserved keyword : declare
+datatype : int
+id : marks
+punctuation : ;
+reserved keyword : local
+datatype : char
+id : grade
+special symbol : (
+special symbol : )
+special symbol : {
+reserved keyword : in case that
+special symbol : (
+id : marks
+reserved keyword : geq
+constant : 90
+special symbol : )
+reserved keyword : do
+special symbol : {
+reserved keyword : return
+punctuation : '
+constant : A
+punctuation : '
+punctuation : ;
+special symbol : }
+reserved keyword : otherwise
+special symbol : {
+reserved keyword : return
+punctuation : '
+constant : F
+punctuation : '
+punctuation : ;
+special symbol : }
+special symbol : }
+reserved keyword : local
+datatype : void
+id : setmarks
+special symbol : (
+special symbol : )
+special symbol : {
+reserved keyword : expr
+id : marks
+operator : =
+constant : 100
+punctuation : ;
+reserved keyword : return
+datatype : void
+punctuation : ;
+special symbol : }
+special symbol : }
+reserved keyword : global
+datatype : int
+id : main
+special symbol : (
+special symbol : )
+special symbol : {
+reserved keyword : declare
+id : assignment
+id : curr
+punctuation : ;
+reserved keyword : call
+id : curr
+operator : ->
+id : setmarks
+special symbol : (
+special symbol : )
+punctuation : ;
+reserved keyword : return
+reserved keyword : call
+id : curr
+operator : ->
+id : grade
+special symbol : (
+special symbol : )
+punctuation : ;
+special symbol : }
