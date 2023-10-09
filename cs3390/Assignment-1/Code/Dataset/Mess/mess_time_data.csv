@@ -1,0 +1,57 @@
+Day,Time,Rush,Category,Friends,Holiday,Weather,TimeSpent
+Monday,08:30,No,Breakfast,Without Friends,No,Not Rainy,13
+Monday,12:30,No,Lunch,Without Friends,No,Not Rainy,25
+Monday,17:40,Yes,Snacks,Without Friends,No,Not Rainy,15
+Monday,19:50,No,Dinner,With Friends,No,Not Rainy,33
+Tuesday,08:05,No,Breakfast,With Friends,No,Not Rainy,28
+Tuesday,13:55,Yes,Lunch,With Friends,No,Not Rainy,40
+Tuesday,17:41,Yes,Snacks,With Friends,No,Not Rainy,31
+Tuesday,19:33,No,Dinner,With Friends,No,Not Rainy,30
+Wednesday,09:00,No,Breakfast,Without Friends,No,Rainy,34
+Wednesday,12:30,No,Lunch,Without Friends,No,Rainy,49
+Wednesday,17:51,Yes,Snacks,Without Friends,No,Rainy,22
+Wednesday,19:46,No,Dinner,With Friends,No,Rainy,29
+Thursday,09:08,No,Breakfast,Without Friends,Yes,Rainy,28
+Thursday,13:36,Yes,Lunch,Without Friends,Yes,Rainy,31
+Thursday,17:45,Yes,Snacks,Without Friends,Yes,Rainy,17
+Thursday,20:50,Yes,Dinner,With Friends,Yes,Rainy,48
+Friday,10:10,Yes,Breakfast,Without Friends,No,Rainy,34
+Friday,13:35,Yes,Lunch,Without Friends,No,Rainy,64
+Friday,17:25,No,Snacks,With Friends,No,Rainy,30
+Friday,20:11,No,Dinner,With Friends,No,Rainy,26
+Saturday,07:48,No,Breakfast,With Friends,Yes,Not Rainy,31
+Saturday,13:23,Yes,Lunch,Without Friends,Yes,Not Rainy,33
+Saturday,17:09,No,Snacks,With Friends,Yes,Not Rainy,30
+Saturday,19:28,No,Dinner,With Friends,Yes,Not Rainy,27
+Sunday,08:23,No,Breakfast,With Friends,Yes,Not Rainy,28
+Sunday,13:26,Yes,Lunch,Without Friends,Yes,Not Rainy,22
+Sunday,17:26,Yes,Snacks,Without Friends,Yes,Not Rainy,30
+Sunday,19:30,Yes,Dinner,With Friends,Yes,Not Rainy,85
+Monday,08:30,Yes,Breakfast,Without Friends,Yes,Not Rainy,18
+Monday,14:00,Yes,Lunch,Without Friends,Yes,Not Rainy,20
+Monday,17:12,No,Snacks,With Friends,Yes,Not Rainy,22
+Monday,20:41,Yes,Dinner,With Friends,Yes,Not Rainy,22
+Tuesday,09:10,Yes,Breakfast,Without Friends,No,Not Rainy,21
+Tuesday,13:50,Yes,Lunch,Without Friends,No,Not Rainy,24
+Tuesday,17:15,No,Snacks,With Friends,No,Not Rainy,36
+Tuesday,20:30,No,Dinner,With Friends,No,Not Rainy,19
+Wednesday,08:50,No,Breakfast,Without Friends,No,Rainy,32
+Wednesday,14:23,Yes,Lunch,With Friends,No,Rainy,44
+Wednesday,17:40,No,Snacks,Without Friends,No,Rainy,21
+Wednesday,19:50,No,Dinner,With Friends,No,Rainy,22
+Thursday,08:50,No,Breakfast,Without Friends,No,Rainy,22
+Thursday,13:55,Yes,Lunch,Without Friends,No,Rainy,31
+Thursday,17:46,Yes,Snacks,Without Friends,No,Rainy,16
+Thursday,20:30,Yes,Dinner,With Friends,No,Rainy,49
+Friday,08:50,Yes,Breakfast,Without Friends,No,Not Rainy,21
+Friday,13:00,Yes,Lunch,With Friends,No,Not Rainy,30
+Friday,17:30,No,Snacks,With Friends,No,Not Rainy,32
+Friday,19:41,Yes,Dinner,With Friends,No,Not Rainy,45
+Saturday,09:30,No,Breakfast,Without Friends,Yes,Not Rainy,15
+Saturday,12:36,Yes,Lunch,Without Friends,Yes,Not Rainy,22
+Saturday,17:35,Yes,Snacks,Without Friends,Yes,Not Rainy,14
+Saturday,19:50,Yes,Dinner,With Friends,Yes,Not Rainy,39
+Sunday,09:10,No,Breakfast,With Friends,Yes,Not Rainy,56
+Sunday,12:55,Yes,Lunch,Without Friends,Yes,Not Rainy,20
+Sunday,17:31,Yes,Snacks,Without Friends,Yes,Not Rainy,20
+Sunday,19:30,No,Dinner,With Friends,Yes,Not Rainy,61
