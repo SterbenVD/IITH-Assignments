@@ -1,0 +1,9 @@
+[submodule "dbms(cs3550 + cs3563)/stovfl_clone"]
+	path = dbms(cs3550 + cs3563)/stovfl_clone
+	url = https://github.com/SterbenVD/stovfl_clone
+[submodule "cs3423/CS3423-DSL"]
+	path = cs3423/CS3423-DSL
+	url = https://github.com/HarshitPnt/CS3423-DSL.git
+[submodule "cs3530/ALTO"]
+	path = cs3530/ALTO
+	url = https://github.com/SterbenVD/ALTO.git

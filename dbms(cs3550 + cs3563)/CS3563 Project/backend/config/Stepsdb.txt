@@ -1,8 +1,0 @@
-sudo su - postgres
-cd config folder (replace config folder with location)
-psql -d postgres
-drop database cqadb;
-\q
-createdb cqadb
-psql -d cqadb
-\i ./cdb.sql
