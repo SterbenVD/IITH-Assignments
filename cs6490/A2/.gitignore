@@ -1,0 +1,6 @@
+*venv
+scale-sim-v2
+*data
+*graph
+*output
+*.png
