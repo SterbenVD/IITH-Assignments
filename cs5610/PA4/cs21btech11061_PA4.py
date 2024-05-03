@@ -23,6 +23,20 @@ def file_write(output_data):
     with open(output_file, 'w') as f:
         writer = csv.writer(f)
         writer.writerows(output_data)
+        
+def matrix_mul(A, B):
+    n = len(A)
+    m = len(B[0])
+    l = len(B)
+    
+    C = [[0 for _ in range(m)] for _ in range(n)]
+    
+    for i in range(n):
+        for j in range(m):
+            for k in range(l):
+                C[i][j] += A[i][k] * B[k][j]
+    
+    return C
 
 # To do: 
 # 1) gcd of two polynomials
@@ -35,6 +49,10 @@ class Zn:
     # Initialize the class Zn
     def __init__(self, n, value):
         self.n = n
+        if value < 0:
+            value = -value
+            value = value % n
+            value = n - value
         self.value = value % n
     
     def __add__(self, other):
@@ -70,9 +88,27 @@ class Zn:
         else:
             return p * p * self
         
+    def gcd(self, other):
+        a = self
+        b = other
+        M = [[Zn(self.n, 1), Zn(self.n, 0)], [Zn(self.n, 0), Zn(self.n, 1)]]
+        while not b.is_zero():
+            q = a // b
+            M = matrix_mul(M, [[Zn(self.n, 0), Zn(self.n, 1)], [Zn(self.n, 1), -q]])
+            a, b = b, a % b
+        X_f = [[Zn(self.n, 1)], [Zn(self.n, 0)]]
+        X_0 = matrix_mul(M, X_f)
+        x = X_f[0][0]
+        y = X_0[1][0]
+        gcd = a
+        return gcd, x, y
+        
     def __inv__(self):
         # Since n is prime, a^(n-1) = 1 mod n
         return self.__pow__(Zn(self.n, self.n-2))
+    
+    def is_zero(self):
+        return self.value == 0
     
     def __str__(self):
         return str(self.value)
@@ -146,6 +182,7 @@ class poly:
         # Initialize the quotient of two polynomials
         q = [Zn(self.p, 0) for _ in range(self.deg - other.deg + 1)]
         
+        
         # Find the quotient of two polynomials
         r = self
         
@@ -162,13 +199,8 @@ class poly:
     def __mod__(self, other):
         # Find the quotient of two polynomials
         r = self
-        
-        while r.deg >= other.deg and not r.is_zero():
-            d = [Zn(self.p, 0) for _ in range(r.deg - other.deg + 1)]
-            d[-1] = r.polynom[r.deg] / other.polynom[other.deg]
-            r -= other * poly(d, self.p)
-        
-        return r
+        q = r // other
+        return r - other * q
     
     # Integer division of two polynomials
     def __floordiv__(self, other):
@@ -179,21 +211,20 @@ class poly:
     
     ## Find the gcd of two polynomials by using the extended euclidean algorithm
     def gcd(self, other):
-        # Initialize the polynomials    
         a = self
         b = other
-        
-        r, r_ = a, b
-        s, s_ = poly([Zn(self.p, 1)], self.p), poly([Zn(self.p, 0)], self.p)
-        t, t_ = poly([Zn(self.p, 0)], self.p), poly([Zn(self.p, 1)], self.p)
-        
-        while not r_.is_zero():
-            q = r // r_
-            r, r_ = r_, r - q * r_
-            s, s_ = s_, s - q * s_
-            t, t_ = t_, t - q * t_
-        
-        return r, s, t
+        print("a:", a)
+        print("b:", b)
+        if b.is_zero():
+            return a, poly([Zn(self.p, 1)], self.p), poly([Zn(self.p, 0)], self.p)
+        if a.deg < b.deg:
+            return b.gcd(a)
+        q = a // b
+        r = a % b
+        print("q:", q)
+        print("r:", r)
+        gcd, u, v = b.gcd(r)
+        return gcd, v, u - q * v
         
     # If polynomial is equal to zero
     def is_zero(self):
@@ -269,23 +300,16 @@ def main():
     p1 = poly(p1, prime)
     p2 = poly(p2, prime)
     
-    # # Find the gcd of two polynomials
+    # Find the gcd of two polynomials
+    
+    print(p1 / p2)
+    print(p2 / p1)
     
     gcd, u, v = p1.gcd(p2)
     
-    # # Part 1: Find the gcd of two polynomials
-    
-    print("GCD:", gcd)
-    
-    # # Part 2: Find u(x) and v(x) such that f(x)u(x) + g(x)v(x) = gcd(f(x), g(x))
-    
-    print("u:", u)
-    print("v:", v)
-    
-    c = p1 * u
-    d = p2 * v
-    
-    print("f(x)u(x) + g(x)v(x):", c + d)
+    print(gcd)
+    print(u)
+    print(v)
     
 # call main function
 if __name__ == "__main__":
