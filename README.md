@@ -19,4 +19,5 @@ Courses:
 - CS6290: Algorithmic Techniques for Large graphs 
 - CS6490: Hardware for Deep Learning
 - EE1202: Digital Circuits
+- EE1206: Linear Systems and Signal Processing
 - MA2140: Introduction to Statistics
