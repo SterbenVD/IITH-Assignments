@@ -13,10 +13,10 @@ Courses:
 - CS3530: Computer Networks
 - CS3550: DBMS-1
 - CS3563: DBMS-2
+- CS5320: Distributed Computing
+- CS5480: Deep Learning
+- CS5610: Computational Number Theory and Algebra
+- CS6290: Algorithmic Techniques for Large graphs 
+- CS6490: Hardware for Deep Learning
 - EE1202: Digital Circuits
-- MA2140: Statistics
-
-Clubs:
-
-- TL: Tinkerer's Lab
-- Infero: Competitive Programming Club
+- MA2140: Introduction to Statistics
